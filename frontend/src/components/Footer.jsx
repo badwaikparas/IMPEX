@@ -12,14 +12,14 @@ function Footer() {
                 gap: '25px 100px'
             }}>
                 {/* <div> */}
-                <div>
+                <div className='border-slate-500 border-b-2'>
                     <img src={logo} alt="Company logo" className='w-20 rounded-lg' />
                 </div>
-                <div>
+                <div className='border-slate-500 border-b-2 pb-10'>
                     <h1 className='font-semibold'>Our Vision</h1>
                     <p className='font-cholla text-3xl'>At Company our passion is growing creative buisness through Creativity, Investment and Enterprise to accelerate yourbusiness and go global</p>
                 </div>
-                <div>
+                <div className='border-slate-500 border-b-2'>
                     <h1>Social</h1>
                     <div className='flex justify-start items-center gap-6 my-5'>
                         <a href="" className=''>
@@ -40,11 +40,11 @@ function Footer() {
                 {/* <div className='flex gap-2 justify-between'> */}
                 <div>
                     <h1>For</h1>
-                    <div className='font-volaroid'>
-                        <p>FASHION</p>
-                        <p>FILM</p>
-                        <p>DESIGN</p>
-                        <p>NEW MEDIA</p>
+                    <div className='font-volaroid flex flex-col gap-3'>
+                        <p style={{ color: '#c7638d' }}>FASHION</p>
+                        <p style={{ color: '#3ca3a2' }}>FILM</p>
+                        <p style={{ color: '#3372c5' }}>DESIGN</p>
+                        <p style={{ color: '#d4b25d' }}>NEW MEDIA</p>
                         <p>MUSIC</p>
                     </div>
                 </div>
@@ -78,8 +78,8 @@ function Footer() {
                 <div className='flex flex-col gap-4'>
                     <div>
                         <h1>CONTACT US</h1>
-                        <p> +91 07 3337 7801</p>
-                        <p>info@creativeenterprise.qut.com.au</p>
+                        <p className='font-cholla text-4xl'> +91 07 3337 7801</p>
+                        <p className='font-cholla text-4xl'>info@creativeenterprise.com</p>
                     </div>
 
                     <div>
