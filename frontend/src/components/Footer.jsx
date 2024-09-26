@@ -1,0 +1,99 @@
+import React from 'react'
+import facebook from '../assets/square-facebook-brands-solid.svg'
+import instagram from '../assets/square-instagram-brands-solid.svg'
+import Xcom from '../assets/square-x-twitter-brands-solid (1).svg'
+import youtube from '../assets/square-youtube-brands-solid (1).svg'
+import logo from '../assets/logo.png'
+function Footer() {
+    return (
+        <>
+            <div className='bg-slate-800 p-10 text-white rounded-lg grid' style={{
+                gridTemplateColumns: '20% auto auto',
+                gap: '25px 100px'
+            }}>
+                {/* <div> */}
+                <div>
+                    <img src={logo} alt="Company logo" className='w-20 rounded-lg' />
+                </div>
+                <div>
+                    <h1 className='font-semibold'>Our Vision</h1>
+                    <p className='font-cholla text-3xl'>At Company our passion is growing creative buisness through Creativity, Investment and Enterprise to accelerate yourbusiness and go global</p>
+                </div>
+                <div>
+                    <h1>Social</h1>
+                    <div className='flex justify-start items-center gap-6 my-5'>
+                        <a href="" className=''>
+                            <img src={facebook} alt="facebook" className='w-8' />
+                        </a>
+                        <a href="">
+                            <img src={instagram} alt="instagram" className='w-8' />
+                        </a>
+                        <a href="">
+                            <img src={Xcom} alt="X.com" className='w-8' />
+                        </a>
+                        <a href="">
+                            <img src={youtube} alt="youtube" className='w-8' />
+                        </a>
+                    </div>
+                </div>
+                {/* </div> */}
+                {/* <div className='flex gap-2 justify-between'> */}
+                <div>
+                    <h1>For</h1>
+                    <div className='font-volaroid'>
+                        <p>FASHION</p>
+                        <p>FILM</p>
+                        <p>DESIGN</p>
+                        <p>NEW MEDIA</p>
+                        <p>MUSIC</p>
+                    </div>
+                </div>
+                <div className='grid grid-cols-2'>
+                    <div>
+                        <h1>Services</h1>
+                        <div className='grid-cols-2'>
+                            <ul>
+                                <li><a href="">Buisness Development</a></li>
+                                <li><a href="">Monitoring</a></li>
+                                <li><a href="">Stock Hire</a></li>
+                                <li><a href="">Investing</a></li>
+                                <li><a href="">Hi1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>ABOUT US</h1>
+                        <div>
+                            <ul>
+                                <li><a href="">hi1</a></li>
+                                <li><a href="">hi2</a></li>
+                                <li><a href="">hi3</a></li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className='flex flex-col gap-4'>
+                    <div>
+                        <h1>CONTACT US</h1>
+                        <p> +91 07 3337 7801</p>
+                        <p>info@creativeenterprise.qut.com.au</p>
+                    </div>
+
+                    <div>
+                        <h2>Creative Industries Enterprise Center</h2>
+                        <p>Floor 2 Rajma  Building</p>
+                        <p>Sitabuldi, Nagpur</p>
+                        <p>Maharastra, India</p>
+                    </div>
+                </div>
+
+                {/* </div> */}
+            </div>
+        </>
+    )
+}
+
+export default Footer

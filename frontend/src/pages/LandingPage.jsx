@@ -1,0 +1,234 @@
+import React, { useEffect, useState } from 'react'; // Removed duplicate `useEffect` import
+import Wall from '../assets/Wall.jpg';
+import Tile from '../components/Tile';
+import TileContent from '../data/Tile';
+import background from '../assets/CompanyCount.jpeg';
+import Faq from '../components/Faq';
+import Footer from '../components/Footer';
+
+function LandingPage() {
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+    const [count3, setCount3] = useState(0);
+    const [count4, setCount4] = useState(0);
+
+    const threshold1 = 100;
+    const threshold2 = 1001;
+    const threshold3 = 200;
+    const threshold4 = 350;
+
+    useEffect(() => {
+        let intervalId;
+        if (count1 < threshold1) {
+            intervalId = setInterval(() => {
+                setCount1((c) => Math.min(c + 1, threshold1));
+            }, 2000 / threshold1);
+        }
+        return () => clearInterval(intervalId);
+    }, [count1, threshold1]);
+
+    useEffect(() => {
+        let intervalId;
+        if (count2 < threshold2) {
+            intervalId = setInterval(() => {
+                setCount2((c) => Math.min(c + 1, threshold2));
+            }, 2000 / threshold2);
+        }
+        return () => clearInterval(intervalId);
+    }, [count2, threshold2]);
+
+    useEffect(() => {
+        let intervalId;
+        if (count3 < threshold3) {
+            intervalId = setInterval(() => {
+                setCount3((c) => Math.min(c + 1, threshold3));
+            }, 2000 / threshold3);
+        }
+        return () => clearInterval(intervalId);
+    }, [count3, threshold3]);
+
+    useEffect(() => {
+        let intervalId;
+        if (count4 < threshold4) {
+            intervalId = setInterval(() => {
+                setCount4((c) => Math.min(c + 1, threshold4));
+            }, 2000 / threshold4);
+        }
+        return () => clearInterval(intervalId);
+    }, [count4, threshold4]);
+
+    return (
+        <>
+            <div>
+                <img src={Wall} alt="" width={'100%'} className='object-cover'
+                    style={{ height: "800px" }}
+                />
+            </div>
+
+            <div className=''
+                style={{
+                    padding: '100px 20%'
+                }}
+            >
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores magnam nobis. Amet saepe id voluptate quidem quas esse. Sunt corrupti quae doloribus ut explicabo totam velit esse unde ipsa.
+                Natus dignissimos et reprehenderit. Placeat error quasi enim excepturi iure quod omnis. Reprehenderit ullam, delectus dignissimos, et repudiandae repellat aliquid cupiditate reiciendis perspiciatis est error dicta veritatis tempore corrupti laudantium?
+            </div>
+
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, 350px)',
+                    justifyContent: 'center',
+                    gap: '45px 45px'
+                }}
+            >
+                {TileContent.map((tile, index) => (
+                    <Tile text={tile.title} key={index} />
+                ))}
+            </div>
+            <div className='flex justify-center items-center mx-auto'
+                style={{
+                    padding: '10% 0',
+                    width: '56.25%',
+                    height: '56.29%'
+                }}
+            >
+                <iframe width="1080" height="608" src="https://www.youtube.com/embed/QYFG0xP12yE?si=eUjMaIrk0-P0e-5R" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+                    className='rounded-2xl'
+                >
+                </iframe>
+            </div>
+
+            <div
+                className='rounded-3xl'
+                style={{
+                    backgroundImage: `url(${background})`,
+                    height: "350px",
+                    display: 'flex',
+                    justifyContent: 'space-around'
+                }}>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}
+                >
+                    <h1 className='text-10xl'
+                        style={{
+                            fontSize: '100px',
+                            color: 'white'
+                        }}
+                    >
+                        {count1}+
+                    </h1>
+                    <p
+                        style={{
+                            fontSize: '20px',
+                            color: 'white'
+                        }}
+                    >Trusted by</p>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}
+                >
+                    <h1 className='text-10xl'
+                        style={{
+                            fontSize: '100px',
+                            color: 'white'
+                        }}
+                    >
+                        {count2}+
+                    </h1>
+                    <p
+                        style={{
+                            fontSize: '20px',
+                            color: 'white'
+                        }}
+                    >Trusted by</p>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}
+                >
+                    <h1 className='text-10xl'
+                        style={{
+                            fontSize: '100px',
+                            color: 'white'
+                        }}
+                    >
+                        {count3}+
+                    </h1>
+                    <p
+                        style={{
+                            fontSize: '20px',
+                            color: 'white'
+                        }}
+                    >Trusted by</p>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}
+                >
+                    <h1 className='text-10xl'
+                        style={{
+                            fontSize: '100px',
+                            color: 'white'
+                        }}
+                    >
+                        {count4}+
+                    </h1>
+                    <p
+                        style={{
+                            fontSize: '20px',
+                            color: 'white'
+                        }}
+                    >Trusted by</p>
+                </div>
+            </div>
+
+            <Faq />
+            {/* <div>hi</div> */}
+
+
+            <div className='flex flex-col justify-center items-center' style={{
+                width: '60%',
+                margin: '7% auto',
+                boxShadow: '5px 5px 20px 2px #AAAAAA',
+                padding: '50px 100px',
+            }}>
+                <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
+                <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
+                <div className='m-10 w-full flex justify-center items-center gap-2'>
+                    <input type="email" placeholder='Email' className='p-5 border-slate-700 border-2' style={{
+                        width: '80%',
+                    }} />
+                    <button className='p-5' style={{
+                        background: '#053049',
+                        color: 'white',
+                        fontWeight: 'bolder',
+                        fontSize: 'large',
+                        width: '250px'
+                    }}>Request Demo</button>
+                </div>
+            </div>
+            <Footer />
+        </>
+    );
+}
+
+export default LandingPage;
