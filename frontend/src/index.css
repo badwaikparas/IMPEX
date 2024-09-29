@@ -24,4 +24,13 @@
         /* font-weight: 500;
         font-style: normal; */
     }
+
+    @font-face {
+        font-family: 'Phobes';
+        src: url('/src/fonts/TT Phobes/TT Phobos Trial Black.otf') format('opentype');
+        /* font-weight: 500;
+        font-style: normal; */
+    }
+
+
 }

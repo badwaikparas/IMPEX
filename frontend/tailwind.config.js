@@ -5,12 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        // 'Wall': 'url("./assets/Wall.jpg")'
+      }
+    },
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
       'volaroid': ['Volaroid san', 'sans-serif'],
       'sancoale': ['Sancoale', 'sans-serif'],
-      'cholla': ['ChollaSlabThin', 'sans-serif']
+      'cholla': ['ChollaSlabThin', 'sans-serif'],
+      'phobes': ['Phobes', 'sans-serif'],
     }
   },
   plugins: [],

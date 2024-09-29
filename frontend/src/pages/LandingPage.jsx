@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'; // Removed duplicate `useEffect` import
 import Wall from '../assets/Wall.jpg';
-import Tile from '../components/Tile';
-import TileContent from '../data/Tile';
+import Tile from '../components/CompanyTile';
+import TileContent from '../data/FeatureTile';
 import background from '../assets/CompanyCount.jpeg';
 import Faq from '../components/Faq';
 import Footer from '../components/Footer';
+import ZoomImage from '../components/ZoomImage';
+import { Count } from '../components/Count';
+import FeatureTile from '../components/FeatureTile';
+import CompanyTile from '../components/CompanyTile';
+import FeatureTileContent from '../data/FeatureTile';
+import CompanyTileContent from '../data/CompanyTile';
 
 function LandingPage() {
     const [count1, setCount1] = useState(0);
@@ -59,11 +65,7 @@ function LandingPage() {
 
     return (
         <>
-            <div>
-                <img src={Wall} alt="" width={'100%'} className='object-cover'
-                    style={{ height: "800px" }}
-                />
-            </div>
+            <ZoomImage />
 
             <div className=''
                 style={{
@@ -74,6 +76,14 @@ function LandingPage() {
                 Natus dignissimos et reprehenderit. Placeat error quasi enim excepturi iure quod omnis. Reprehenderit ullam, delectus dignissimos, et repudiandae repellat aliquid cupiditate reiciendis perspiciatis est error dicta veritatis tempore corrupti laudantium?
             </div>
 
+
+            {/* //_                                   What Company Does */}
+            <h1 style={{
+                fontSize: '50px',
+                padding: '3% 8%',
+            }}
+                className='font-volaroid'
+            >Company services</h1>
             <div
                 style={{
                     display: 'grid',
@@ -82,10 +92,13 @@ function LandingPage() {
                     gap: '45px 45px'
                 }}
             >
-                {TileContent.map((tile, index) => (
-                    <Tile text={tile.title} key={index} />
+                {CompanyTileContent.map((tile, index) => (
+                    <CompanyTile text={tile.title} key={index} content={tile.content} img={tile.img} />
                 ))}
             </div>
+
+
+            {/* //_                                   Video */}
             <div className='flex justify-center items-center mx-auto'
                 style={{
                     padding: '10% 0',
@@ -93,118 +106,58 @@ function LandingPage() {
                     height: '56.29%'
                 }}
             >
-                <iframe width="1080" height="608" src="https://www.youtube.com/embed/QYFG0xP12yE?si=eUjMaIrk0-P0e-5R" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+                <iframe width="1080" height="608"
+                    src="https://www.youtube.com/embed/QYFG0xP12yE?si=eUjMaIrk0-P0e-5R" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
                     className='rounded-2xl'
                 >
                 </iframe>
             </div>
 
-            <div
+
+            {/* //! _                                   Count */}
+            {/* <div
                 className='rounded-3xl'
                 style={{
                     backgroundImage: `url(${background})`,
-                    height: "350px",
+                    height: "10rem",
                     display: 'flex',
                     justifyContent: 'space-around'
                 }}>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-                    <h1 className='text-10xl'
-                        style={{
-                            fontSize: '100px',
-                            color: 'white'
-                        }}
-                    >
-                        {count1}+
-                    </h1>
-                    <p
-                        style={{
-                            fontSize: '20px',
-                            color: 'white'
-                        }}
-                    >Trusted by</p>
-                </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-                    <h1 className='text-10xl'
-                        style={{
-                            fontSize: '100px',
-                            color: 'white'
-                        }}
-                    >
-                        {count2}+
-                    </h1>
-                    <p
-                        style={{
-                            fontSize: '20px',
-                            color: 'white'
-                        }}
-                    >Trusted by</p>
-                </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-                    <h1 className='text-10xl'
-                        style={{
-                            fontSize: '100px',
-                            color: 'white'
-                        }}
-                    >
-                        {count3}+
-                    </h1>
-                    <p
-                        style={{
-                            fontSize: '20px',
-                            color: 'white'
-                        }}
-                    >Trusted by</p>
-                </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-                    <h1 className='text-10xl'
-                        style={{
-                            fontSize: '100px',
-                            color: 'white'
-                        }}
-                    >
-                        {count4}+
-                    </h1>
-                    <p
-                        style={{
-                            fontSize: '20px',
-                            color: 'white'
-                        }}
-                    >Trusted by</p>
-                </div>
+                <Count count={count1} />
+                <Count count={count2} />
+                <Count count={count3} />
+                <Count count={count4} />
+            </div> */}
+
+
+            {/* //_                                   Features */}
+            <h1 style={{
+                fontSize: '50px',
+                // padding: '3% 8%',
+                padding: '10% 2%'
+            }}
+                className='font-volaroid'
+            >Features</h1>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, 350px)',
+                    justifyContent: 'center',
+                    gap: '45px 45px',
+                    // padding: '10% 0'
+                }}
+            >
+                {FeatureTileContent.map((tile, index) => (
+                    <FeatureTile text={tile.title} key={index} img={tile.img} />
+                ))}
             </div>
 
+
+            {/* //_                                   FAQ */}
             <Faq />
-            {/* <div>hi</div> */}
 
 
+            {/* //_                                   Request Demo */}
             <div className='flex flex-col justify-center items-center' style={{
                 width: '60%',
                 margin: '7% auto',
@@ -226,6 +179,8 @@ function LandingPage() {
                     }}>Request Demo</button>
                 </div>
             </div>
+
+            {/* //_                                   Footer */}
             <Footer />
         </>
     );

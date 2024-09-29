@@ -17,7 +17,7 @@ function Navbar() {
             <div>
                 <img src={logo} alt="Company Logo" className='w-20 rounded-2xl' />
             </div>
-            <div>
+            <div className='text-white'>
                 <ul
                     className='list-none flex text-2xl font-bold justify-evenly items-center'
                     style={{ width: "700px" }}
@@ -28,15 +28,15 @@ function Navbar() {
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         About Us
                     </li>
-                    <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
+                    {/* <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         hi3
                     </li>
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         hi4
-                    </li>
+                    </li> */}
                     <li className='cursor-pointer'>
                         <div className='px-3 py-2 bg-blue-400 rounded-2xl text-white hover:bg-blue-500 transition duration-200'>
-                            Contact Us
+                            Request Demo
                         </div>
                     </li>
                 </ul>
