@@ -72,8 +72,7 @@ function LandingPage() {
                     padding: '100px 20%'
                 }}
             >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores magnam nobis. Amet saepe id voluptate quidem quas esse. Sunt corrupti quae doloribus ut explicabo totam velit esse unde ipsa.
-                Natus dignissimos et reprehenderit. Placeat error quasi enim excepturi iure quod omnis. Reprehenderit ullam, delectus dignissimos, et repudiandae repellat aliquid cupiditate reiciendis perspiciatis est error dicta veritatis tempore corrupti laudantium?
+                Company Info
             </div>
 
 

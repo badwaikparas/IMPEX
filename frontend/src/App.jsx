@@ -6,7 +6,7 @@ function App() {
 
     return (
         <div className='font-roboto bg-transparent m-0 p-0 rounded-lg' >
-            {/* <Navbar /> */}
+            <Navbar />
             <LandingPage />
         </div >
     )
