@@ -114,11 +114,11 @@ function LandingPage() {
 
 
             {/* //! _                                   Count */}
-            {/* <div
+            <div
                 className='rounded-3xl'
                 style={{
                     backgroundImage: `url(${background})`,
-                    height: "10rem",
+                    height: "auto",
                     display: 'flex',
                     justifyContent: 'space-around'
                 }}>
@@ -126,7 +126,7 @@ function LandingPage() {
                 <Count count={count2} />
                 <Count count={count3} />
                 <Count count={count4} />
-            </div> */}
+            </div>
 
 
             {/* //_                                   Features */}

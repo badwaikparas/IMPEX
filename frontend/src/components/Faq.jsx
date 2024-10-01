@@ -16,7 +16,7 @@ function Faq() {
                     <div className="w-full lg:w-1/2">
                         <img
                             src=""
-                            alt="FAQ section"
+                            alt="FAQ Image"
                             className="w-full rounded-xl object-cover"
                         />
                     </div>
