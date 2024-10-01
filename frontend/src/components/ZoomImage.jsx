@@ -113,8 +113,7 @@ export const ZoomImage = () => {
                 // filter: 'blur(5px)',
                 textShadow: '5px 5px 5px black'
             }}>
-                Recycling Software to
-                Manage and Grow Your Business
+                Heading
             </div>
         </div>
     )

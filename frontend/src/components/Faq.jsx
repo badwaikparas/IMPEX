@@ -45,7 +45,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>How to create an account?</h5>
+                                        <h5>Question 1</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq1 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -66,7 +66,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq1 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            You can create an account by clicking on the sign-up button and filling in the necessary details.
+                                            Answer 1
                                         </p>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>Have any trust issues?</h5>
+                                        <h5>Question 2</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq2 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -104,7 +104,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq2 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.
+                                            Answer 2
                                         </p>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>How can I reset my password?</h5>
+                                        <h5>Question 3</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq3 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -142,7 +142,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq3 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            You can reset your password by going to the login page and clicking on Follow the instructions provided to reset your password.
+                                            Answer 3
                                         </p>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ function Faq() {
                                             faq4: !display.faq4
                                         }))}
                                     >
-                                        <h5>What is the payment process?</h5>
+                                        <h5>Question 4</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq4 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -180,7 +180,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq4 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            We offer multiple payment options, including credit cards, PayPal, and more. Choose the method that suits you best during checkout.
+                                            Answer 4
                                         </p>
                                     </div>
                                 </div>

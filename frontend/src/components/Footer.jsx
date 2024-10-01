@@ -205,26 +205,26 @@ function Footer() {
     return (
         <>
             <div className='bg-slate-800 p-10 text-white rounded-lg flex flex-wrap gap-6'>
-                <div className='w-full sm:w-auto border-slate-500 border-b-2 pb-6'>
-                    <img src={logo} alt="Company logo" className='w-20 rounded-lg' />
+                <div className='w-full sm:w-auto'>
+                    <img src={"logo"} alt="Company logo" className='w-20 rounded-lg' />
                 </div>
-                <div className='w-full sm:flex-1 border-slate-500 border-b-2 pb-6'>
+                <div className='w-full sm:flex-1'>
                     <h1 className='font-semibold'>Our Vision</h1>
-                    <p className='text-lg sm:text-2xl'>At Company, our passion is growing creative business through Creativity, Investment, and Enterprise to accelerate your business and go global.</p>
+                    <p className='text-lg sm:text-2xl'>Our Vision paragraph</p>
                 </div>
-                <div className='w-full sm:w-auto border-slate-500 border-b-2 pb-6'>
+                <div className='w-full sm:w-auto'>
                     <h1>Social</h1>
                     <div className='flex justify-start items-center gap-4 mt-4'>
-                        <a href="#">
+                        <a href="facebook-link">
                             <img src={facebook} alt="facebook" className='w-8' />
                         </a>
-                        <a href="#">
+                        <a href="instagram-link">
                             <img src={instagram} alt="instagram" className='w-8' />
                         </a>
-                        <a href="#">
+                        <a href="xcom-link">
                             <img src={Xcom} alt="X.com" className='w-8' />
                         </a>
-                        <a href="#">
+                        <a href="youtube-link">
                             <img src={youtube} alt="youtube" className='w-8' />
                         </a>
                     </div>
@@ -244,33 +244,33 @@ function Footer() {
                     <div>
                         <h1>Services</h1>
                         <ul className='mt-4'>
-                            <li><a href="#">Business Development</a></li>
-                            <li><a href="#">Monitoring</a></li>
-                            <li><a href="#">Stock Hire</a></li>
-                            <li><a href="#">Investing</a></li>
-                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Service 1</a></li>
+                            <li><a href="#">Service 1</a></li>
+                            <li><a href="#">Service 1</a></li>
+                            <li><a href="#">Service 1</a></li>
+                            <li><a href="#">Service 1</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h1>ABOUT US</h1>
+                        <h1>About Us</h1>
                         <ul className='mt-4'>
-                            <li><a href="#">Company Info</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">About 1</a></li>
+                            <li><a href="#">About 1</a></li>
+                            <li><a href="#">About 1</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className='w-full sm:w-auto flex flex-col gap-4'>
                     <div>
-                        <h1>CONTACT US</h1>
-                        <p className='text-xl'>+91 07 3337 7801</p>
-                        <p className='text-xl'>info@creativeenterprise.com</p>
+                        <h1>Contact Us</h1>
+                        <p className='text-xl'>Phone No.</p>
+                        <p className='text-xl'>Email</p>
                     </div>
                     <div>
-                        <h2>Creative Industries Enterprise Center</h2>
-                        <p>Floor 2 Rajma Building</p>
-                        <p>Sitabuldi, Nagpur</p>
-                        <p>Maharashtra, India</p>
+                        <h2>Address 1</h2>
+                        <p>Address 2</p>
+                        <p>Address 3</p>
+                        <p>Address 4</p>
                     </div>
                 </div>
             </div>

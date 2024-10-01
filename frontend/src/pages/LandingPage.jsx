@@ -67,7 +67,7 @@ function LandingPage() {
         <>
             <ZoomImage />
 
-            <div className=''
+            <div className='flex justify-center'
                 style={{
                     padding: '100px 20%'
                 }}
@@ -78,10 +78,10 @@ function LandingPage() {
 
             {/* //_                                   What Company Does */}
             <h1 style={{
-                fontSize: '50px',
+                fontSize: '80px',
                 padding: '3% 8%',
             }}
-                className='font-volaroid'
+                className=''
             >Company services</h1>
             <div
                 style={{
@@ -92,7 +92,7 @@ function LandingPage() {
                 }}
             >
                 {CompanyTileContent.map((tile, index) => (
-                    <CompanyTile text={tile.title} key={index} content={tile.content} img={tile.img} />
+                    <CompanyTile text={"tile.title"} key={index} content={"tile.content"} img={"tile.img"} />
                 ))}
             </div>
 
@@ -131,11 +131,10 @@ function LandingPage() {
 
             {/* //_                                   Features */}
             <h1 style={{
-                fontSize: '50px',
-                // padding: '3% 8%',
-                padding: '10% 2%'
+                fontSize: '80px',
+                padding: '3% 8%'
             }}
-                className='font-volaroid'
+                className=''
             >Features</h1>
             <div
                 style={{
@@ -147,7 +146,7 @@ function LandingPage() {
                 }}
             >
                 {FeatureTileContent.map((tile, index) => (
-                    <FeatureTile text={tile.title} key={index} img={tile.img} />
+                    <FeatureTile text={"tile.title"} key={index} img={"tile.img"} />
                 ))}
             </div>
 
@@ -158,10 +157,10 @@ function LandingPage() {
 
             {/* //_                                   Request Demo */}
             <div className='flex flex-col justify-center items-center' style={{
-                width: '60%',
+                width: '80%',
                 margin: '7% auto',
                 boxShadow: '5px 5px 20px 2px #AAAAAA',
-                padding: '50px 100px',
+                padding: '5% 10%',
             }}>
                 <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
                 <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>

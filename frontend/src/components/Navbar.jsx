@@ -15,7 +15,7 @@ function Navbar() {
             }}
         >
             <div>
-                <img src={logo} alt="Company Logo" className='w-20 rounded-2xl' />
+                <img src={"logo"} alt="Company Logo" className='w-20 rounded-2xl' />
             </div>
             <div className='text-white'>
                 <ul
