@@ -136,10 +136,10 @@ function LandingPage() {
 
             {/* //_                                   Features */}
             <h1 style={{
-                fontSize: '80px',
-                padding: '3% 8%'
+                // fontSize: '80px',
+                padding: '3% 5%',
             }}
-                className=''
+                className='text-4xl navlim:text-xl'
             >Features</h1>
             <div
                 style={{
