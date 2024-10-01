@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Removed duplicate `useEffect` import
+import React, { useEffect, useRef, useState } from 'react'; // Removed duplicate `useEffect` import
 import Wall from '../assets/Wall.jpg';
 import Tile from '../components/CompanyTile';
 import TileContent from '../data/FeatureTile';
@@ -11,12 +11,16 @@ import FeatureTile from '../components/FeatureTile';
 import CompanyTile from '../components/CompanyTile';
 import FeatureTileContent from '../data/FeatureTile';
 import CompanyTileContent from '../data/CompanyTile';
+import Navbar from '../components/Navbar';
 
 function LandingPage() {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
     const [count4, setCount4] = useState(0);
+
+    const reqDemo = useRef(null);
+    const aboutUs = useRef(null);
 
     const threshold1 = 100;
     const threshold2 = 1001;
@@ -65,6 +69,7 @@ function LandingPage() {
 
     return (
         <>
+            <Navbar ref={reqDemo} />
             <ZoomImage />
 
             <div className='flex justify-center'
@@ -92,7 +97,7 @@ function LandingPage() {
                 }}
             >
                 {CompanyTileContent.map((tile, index) => (
-                    <CompanyTile text={"tile.title"} key={index} content={"tile.content"} img={"tile.img"} />
+                    <CompanyTile text={tile.title} key={index} content={tile.content} img={tile.img} />
                 ))}
             </div>
 
@@ -114,7 +119,7 @@ function LandingPage() {
 
 
             {/* //! _                                   Count */}
-            <div
+            {/* <div
                 className='rounded-3xl'
                 style={{
                     backgroundImage: `url(${background})`,
@@ -126,7 +131,7 @@ function LandingPage() {
                 <Count count={count2} />
                 <Count count={count3} />
                 <Count count={count4} />
-            </div>
+            </div> */}
 
 
             {/* //_                                   Features */}
@@ -146,7 +151,7 @@ function LandingPage() {
                 }}
             >
                 {FeatureTileContent.map((tile, index) => (
-                    <FeatureTile text={"tile.title"} key={index} img={"tile.img"} />
+                    <FeatureTile text={tile.title} key={index} img={tile.img} />
                 ))}
             </div>
 
@@ -161,7 +166,7 @@ function LandingPage() {
                 margin: '7% auto',
                 boxShadow: '5px 5px 20px 2px #AAAAAA',
                 padding: '5% 10%',
-            }}>
+            }} ref={reqDemo}>
                 <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
                 <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
                 <div className='m-10 w-full flex justify-center items-center gap-2'>

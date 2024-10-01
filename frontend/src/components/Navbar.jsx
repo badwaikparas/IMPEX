@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import hamburger from '../assets/Icons/bars-solid.svg'
 
-function Navbar() {
+function Navbar({ ref }) {
+    const [drop, setDrop] = useState(true);
     return (
         <nav
             className='absolute custom-container flex justify-between items-center w-full p-2 bg-transparent'
@@ -15,11 +17,11 @@ function Navbar() {
             }}
         >
             <div>
-                <img src={"logo"} alt="Company Logo" className='w-20 rounded-2xl' />
+                <img src={logo} alt="Company Logo" className='w-20 rounded-2xl' />
             </div>
-            <div className='text-white'>
+            <div className='text-black'>
                 <ul
-                    className='list-none flex text-2xl font-bold justify-evenly items-center'
+                    className='list-none text-2xl font-bold justify-evenly items-center hidden navlim:flex'
                     style={{ width: "700px" }}
                 >
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
@@ -28,18 +30,34 @@ function Navbar() {
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         About Us
                     </li>
-                    {/* <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
-                        hi3
-                    </li>
-                    <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
-                        hi4
-                    </li> */}
                     <li className='cursor-pointer'>
-                        <div className='px-3 py-2 bg-blue-400 rounded-2xl text-white hover:bg-blue-500 transition duration-200'>
+                        <div className='px-3 py-2 bg-blue-400 rounded-2xl text-white hover:bg-blue-500 transition duration-200' onClick={() => ref.current ? ref.current.scrollIntoView({ behavior: 'smooth' }) : null}>
                             Request Demo
                         </div>
                     </li>
                 </ul>
+                <div className='block navlim:hidden'>
+                    <img
+                        className='w-10 h-10'
+                        src={hamburger}
+                        alt="hamburger icon"
+                        onClick={() => setDrop(c => !c)}
+                        style={{ cursor: "pointer" }}
+                    />
+                    {drop && <div className=' rounded-lg absolute p-3 bg-white shadow-lg'
+                        style={{
+                            transform: 'translate(calc(-100% + 2.5rem), -0%)',
+                            width: '150px',
+                            height: 'auto'
+                        }}>
+                        <ul className='list-none'>
+                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><a href="">Pricing</a></li>
+                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><a href="">About Us</a></li>
+                            <li className='p-2 cursor-pointer'><a href="">Request Demo</a></li>
+                        </ul>
+                    </div>}
+                </div>
+
             </div >
         </nav >
         // <>
