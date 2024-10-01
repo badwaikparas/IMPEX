@@ -19,6 +19,8 @@ export default {
         },
         screens: {
             'navlim': '790px',
+            'footerlim': '1080px',
+            'footerlim2': '505px',
         },
     },
     plugins: [],
