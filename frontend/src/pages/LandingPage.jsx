@@ -83,10 +83,10 @@ function LandingPage() {
 
             {/* //_                                   What Company Does */}
             <h1 style={{
-                fontSize: '80px',
-                padding: '3% 8%',
+                // fontSize: '80px',
+                padding: '3% 5%',
             }}
-                className=''
+                className='text-4xl navlim:text-xl'
             >Company services</h1>
             <div
                 style={{
@@ -120,7 +120,7 @@ function LandingPage() {
 
             {/* //! _                                   Count */}
             {/* <div
-                className='rounded-3xl'
+                className='rounded-3xl flex flex-wrap'
                 style={{
                     backgroundImage: `url(${background})`,
                     height: "auto",

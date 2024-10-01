@@ -11,18 +11,18 @@ export const Count = ({ count }) => {
             }}
             className='p-4'
         >
-            <h1 className=''
+            <h1 className='text-6xl countlim:text-8xl'
                 style={{
-                    fontSize: '7rem',
+                    // fontSize: '7rem',
                     color: 'white',
-                    lineHeight: '7rem'
+                    // lineHeight: '7rem'
                 }}
             >
                 {count}+
             </h1>
-            <p
+            <p className='text-lg countlim:text-xl'
                 style={{
-                    fontSize: '2rem',
+                    // fontSize: '2rem',
                     color: 'white'
                 }}
             >Trusted by</p>

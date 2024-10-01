@@ -21,6 +21,7 @@ export default {
             'navlim': '790px',
             'footerlim': '1080px',
             'footerlim2': '505px',
+            'countlim': '1300px'
         },
     },
     plugins: [],

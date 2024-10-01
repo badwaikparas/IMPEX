@@ -15,7 +15,10 @@ function Footer() {
                 <div className=''>
                     <img src={logo} alt="Company logo" className='w-20 rounded-lg' />
                 </div>
-                <div className='hidden pb-10 footerlim:block'>
+                <div className='hidden pb-10 footerlim:block' style={{
+                    width: '60%',
+                    flexGrow: 1
+                }}>
                     <h1 className='font-semibold'>Our Vision</h1>
                     <p className=' text-3xl'>At Company our passion is growing creative buisness through Creativity, Investment and Enterprise to accelerate yourbusiness and go global</p>
                 </div>
