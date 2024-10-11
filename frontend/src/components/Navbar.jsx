@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import hamburger from '../assets/Icons/bars-solid.svg'
 
-function Navbar({ ref }) {
+function Navbar({ ref1, ref2 }) {
     const [drop, setDrop] = useState(true);
+
     return (
         <nav
             className='absolute custom-container flex justify-between items-center w-full p-2 bg-transparent'
@@ -27,11 +28,11 @@ function Navbar({ ref }) {
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         Pricing
                     </li>
-                    <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
+                    <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer' onClick={() => ref2.current ? ref2.current.scrollIntoView({ behavior: 'smooth' }) : null}>
                         About Us
                     </li>
                     <li className='cursor-pointer'>
-                        <div className='px-3 py-2 bg-blue-400 rounded-2xl text-white hover:bg-blue-500 transition duration-200' onClick={() => ref.current ? ref.current.scrollIntoView({ behavior: 'smooth' }) : null}>
+                        <div className='px-3 py-2 bg-blue-400 rounded-2xl text-white hover:bg-blue-500 transition duration-200' onClick={() => ref1.current ? ref1.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' }) : null}>
                             Request Demo
                         </div>
                     </li>

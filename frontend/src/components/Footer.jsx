@@ -4,13 +4,13 @@ import instagram from '../assets/square-instagram-brands-solid.svg'
 import Xcom from '../assets/square-x-twitter-brands-solid (1).svg'
 import youtube from '../assets/square-youtube-brands-solid (1).svg'
 import logo from '../assets/logo.png'
-function Footer() {
+
+function Footer({ ref1 }) {
     return (
         <>
             <div className='bg-slate-800 p-10 text-white rounded-lg flex flex-wrap ' style={{
-                gridTemplateColumns: '',
                 gap: '25px 100px'
-            }}>
+            }} ref={ref1}>
                 {/* <div> */}
                 <div className=''>
                     <img src={logo} alt="Company logo" className='w-20 rounded-lg' />

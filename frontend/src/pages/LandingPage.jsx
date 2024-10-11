@@ -19,8 +19,13 @@ function LandingPage() {
     const [count3, setCount3] = useState(0);
     const [count4, setCount4] = useState(0);
 
-    const reqDemo = useRef(null);
-    const aboutUs = useRef(null);
+    const [counterIsVisible, setCounterIsVisible] = useState(false);
+
+    const reqDemoRef = useRef(null);
+    const aboutUsRef = useRef(null);
+    const counterRef = useRef();
+
+
 
     const threshold1 = 100;
     const threshold2 = 1001;
@@ -28,48 +33,58 @@ function LandingPage() {
     const threshold4 = 350;
 
     useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            const entry = entries[0];
+            console.log('entry', entry);
+            console.log('entry.isIntersecting', entry.isIntersecting);
+            setCounterIsVisible(entry.isIntersecting)
+        });
+        observer.observe(counterRef.current)
+    }, [])
+
+    useEffect(() => {
         let intervalId;
-        if (count1 < threshold1) {
+        if (count1 < threshold1 && counterIsVisible) {
             intervalId = setInterval(() => {
                 setCount1((c) => Math.min(c + 1, threshold1));
-            }, 2000 / threshold1);
+            }, 1000 / threshold1);
         }
         return () => clearInterval(intervalId);
-    }, [count1, threshold1]);
+    }, [count1, threshold1, counterIsVisible]);
 
     useEffect(() => {
         let intervalId;
-        if (count2 < threshold2) {
+        if (count2 < threshold2 && counterIsVisible) {
             intervalId = setInterval(() => {
                 setCount2((c) => Math.min(c + 1, threshold2));
-            }, 2000 / threshold2);
+            }, 1000 / threshold2);
         }
         return () => clearInterval(intervalId);
-    }, [count2, threshold2]);
+    }, [count2, threshold2, counterIsVisible]);
 
     useEffect(() => {
         let intervalId;
-        if (count3 < threshold3) {
+        if (count3 < threshold3 && counterIsVisible) {
             intervalId = setInterval(() => {
                 setCount3((c) => Math.min(c + 1, threshold3));
-            }, 2000 / threshold3);
+            }, 1000 / threshold3);
         }
         return () => clearInterval(intervalId);
-    }, [count3, threshold3]);
+    }, [count3, threshold3, counterIsVisible]);
 
     useEffect(() => {
         let intervalId;
-        if (count4 < threshold4) {
+        if (count4 < threshold4 && counterIsVisible) {
             intervalId = setInterval(() => {
                 setCount4((c) => Math.min(c + 1, threshold4));
-            }, 2000 / threshold4);
+            }, 1000 / threshold4);
         }
         return () => clearInterval(intervalId);
-    }, [count4, threshold4]);
+    }, [count4, threshold4, counterIsVisible]);
 
     return (
         <>
-            <Navbar ref={reqDemo} />
+            <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
             <ZoomImage />
 
             <div className='flex justify-center'
@@ -118,25 +133,26 @@ function LandingPage() {
             </div>
 
 
-            {/* //! _                                   Count */}
-            {/* <div
+            {/* //  _                                   Count */}
+            <div
                 className='rounded-3xl flex flex-wrap'
                 style={{
                     backgroundImage: `url(${background})`,
                     height: "auto",
                     display: 'flex',
                     justifyContent: 'space-around'
-                }}>
+                }}
+                ref={counterRef}
+            >
                 <Count count={count1} />
                 <Count count={count2} />
                 <Count count={count3} />
                 <Count count={count4} />
-            </div> */}
+            </div>
 
 
             {/* //_                                   Features */}
             <h1 style={{
-                // fontSize: '80px',
                 padding: '3% 5%',
             }}
                 className='text-4xl navlim:text-xl'
@@ -166,7 +182,7 @@ function LandingPage() {
                 margin: '7% auto',
                 boxShadow: '5px 5px 20px 2px #AAAAAA',
                 padding: '5% 10%',
-            }} ref={reqDemo}>
+            }} ref={reqDemoRef}>
                 <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
                 <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
                 <div className='m-10 w-full flex justify-center items-center gap-2'>
@@ -184,7 +200,7 @@ function LandingPage() {
             </div>
 
             {/* //_                                   Footer */}
-            <Footer />
+            <Footer ref1={aboutUsRef} />
         </>
     );
 }
