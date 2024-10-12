@@ -19,6 +19,8 @@ function LandingPage() {
     const [count3, setCount3] = useState(0);
     const [count4, setCount4] = useState(0);
 
+    const [email, setEmail] = useState("");
+
     const [counterIsVisible, setCounterIsVisible] = useState(false);
 
     const reqDemoRef = useRef(null);
@@ -186,16 +188,36 @@ function LandingPage() {
                 <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
                 <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
                 <div className='m-10 w-full flex justify-center items-center gap-2'>
-                    <input type="email" placeholder='Email' className='p-5 border-slate-700 border-2' style={{
-                        width: '80%',
-                    }} />
-                    <button className='p-5' style={{
-                        background: '#053049',
-                        color: 'white',
-                        fontWeight: 'bolder',
-                        fontSize: 'large',
-                        width: '250px'
-                    }}>Request Demo</button>
+                    <input
+                        type="email"
+                        placeholder='Email'
+                        value={email}
+                        className='p-5 border-slate-700 border-2'
+                        style={{ width: '80%' }}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button
+                        className='p-5'
+                        type='submit'
+                        style={{
+                            background: '#053049',
+                            color: 'white',
+                            fontWeight: 'bolder',
+                            fontSize: 'large',
+                            width: '250px',
+                        }}
+                        onClick={async () => {
+                            fetch('http://localhost:1605/email', {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify({ email: email })
+                            })
+                        }}
+                    >
+                        Request Demo
+                    </button>
                 </div>
             </div>
 
