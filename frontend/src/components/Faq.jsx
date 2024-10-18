@@ -13,13 +13,13 @@ function Faq() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
                     {/* Image Section */}
-                    <div className="w-full lg:w-1/2">
+                    {/* <div className="w-full lg:w-1/2">
                         <img
                             src=""
                             alt="FAQ Image"
                             className="w-full rounded-xl object-cover"
                         />
-                    </div>
+                    </div> */}
 
                     {/* FAQ Content Section */}
                     <div className="w-full lg:w-1/2">
@@ -45,7 +45,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>Question 1</h5>
+                                        <h5> What is the typical onboarding time ?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq1 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -66,7 +66,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq1 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            Answer 1
+                                            Once the formalities are done it takes not more than 4 working days for your business to board & run!.
                                         </p>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>Question 2</h5>
+                                        <h5> What documents are required for importing/exporting goods?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq2 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -104,7 +104,7 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq2 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            Answer 2
+                                            For one time setup , you can either share us all your necessary documents or either we can train you for the same
                                         </p>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5>Question 3</h5>
+                                        <h5> Do you offer customised solutions ?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq3 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -142,13 +142,13 @@ function Faq() {
                                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ease-in-out ${display.faq3 ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <p className="text-base font-normal text-gray-600 py-2">
-                                            Answer 3
+                                            Yes, we provide customised solutions too, just contact us to schedule a call!
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* FAQ Item 4 */}
-                                <div className="accordion py-8">
+                                {/* <div className="accordion py-8">
                                     <button
                                         className="flex justify-between items-center text-xl font-normal leading-8 text-gray-600 w-full transition hover:text-indigo-600"
                                         onClick={() => setDisplay(() => ({
@@ -183,7 +183,7 @@ function Faq() {
                                             Answer 4
                                         </p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

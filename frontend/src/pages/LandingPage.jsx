@@ -12,6 +12,7 @@ import CompanyTile from '../components/CompanyTile';
 import FeatureTileContent from '../data/FeatureTile';
 import CompanyTileContent from '../data/CompanyTile';
 import Navbar from '../components/Navbar';
+import countData from '../data/CountData';
 
 function LandingPage() {
     const [count1, setCount1] = useState(0);
@@ -29,10 +30,10 @@ function LandingPage() {
 
 
 
-    const threshold1 = 100;
-    const threshold2 = 1001;
-    const threshold3 = 200;
-    const threshold4 = 350;
+    const threshold1 = 50;
+    const threshold2 = 1000;
+    const threshold3 = 5;
+    const threshold4 = 4;
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries, observer) => {
@@ -94,7 +95,18 @@ function LandingPage() {
                     padding: '100px 20%'
                 }}
             >
-                Company Info
+                <div>
+                    Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
+                </div>
+                <div>
+                    <p>One-click report generation</p>
+                    <p>Intuitive dashboards with multi-analytics</p>
+                    <p>Automated processes</p>
+                    <p>Effortless management</p>
+                    <p>& much more</p>
+
+                </div>
+                <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
             </div>
 
 
@@ -146,10 +158,13 @@ function LandingPage() {
                 }}
                 ref={counterRef}
             >
-                <Count count={count1} />
-                <Count count={count2} />
-                <Count count={count3} />
-                <Count count={count4} />
+                {
+                    countData.map((countData) => (
+                        // console.log(countData.count);
+                        <Count key={countData.id} count={countData.count} content={countData.content} />
+                    ))
+
+                }
             </div>
 
 

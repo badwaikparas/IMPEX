@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Count = ({ count }) => {
+export const Count = ({ count, content }) => {
     return (
         <div
             style={{
@@ -25,7 +25,7 @@ export const Count = ({ count }) => {
                     // fontSize: '2rem',
                     color: 'white'
                 }}
-            >Trusted by</p>
+            >{content}</p>
         </div>
     )
 }
