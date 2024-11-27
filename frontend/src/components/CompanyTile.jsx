@@ -2,7 +2,7 @@ import React from 'react'
 
 function CompanyTile({ content, text, img }) {
     return (
-        <div className='relative'>
+        <div className='card relative bg-transparent'>
             <div className='flex justify-center items-center rounded-xl bg-blue-950  flex-column border-black border-2'
                 style={{
                     width: '350px',

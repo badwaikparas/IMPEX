@@ -7,7 +7,7 @@ function Navbar({ ref1, ref2 }) {
 
     return (
         <nav
-            className='absolute custom-container flex justify-between items-center w-full p-2 bg-transparent'
+            className='absolute custom-container flex justify-between items-center w-full p-2 bg-transparent z-10'
             style={{
                 backdropFilter: 'blur(4px)',
                 WebkitBackdropFilter: 'blur(4px)',
@@ -15,6 +15,7 @@ function Navbar({ ref1, ref2 }) {
                 borderRadius: '10px',
                 border: '1px solid rgba(255, 255, 255, 0.18)',
                 background: 'rgba(0, 0, 0, 0.15)'
+
             }}
         >
             <div className='font-extrabold text-white text-3xl '>

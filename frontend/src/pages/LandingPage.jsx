@@ -41,83 +41,100 @@ function LandingPage() {
 
     return (
         <>
-            {/* <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
-            <ZoomImage /> */}
-
-            {/* <div className='flex justify-center flex-col bg-repeat'
+            <div className='absolute w-full h-full -z-10'
                 style={{
-                    position: 'relative',
-                    overflow: 'hidden',
-                    width: '100%',
-                    height: '645px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
+                    background: `url(${bg})`,
+                    backgroundSize: 'cover'
+
                 }}
             >
-                <div className='overflow-hidden'>
-                    <div className=' h-full absolute bg-repeat'
-                        style={{
-                            position: 'absolute',
-                            top: '0',
-                            left: '0',
-                            height: '100 %',
-                            width: '300%',
-                            background: `url(${aboutUSBg}) repeat-x`,
-                            animation: 'slide 300s linear infinite',
-                            zIndex: '-1',
-                        }}
-                    ></div>
-                </div>
 
-                <span className='backdrop-blur-sm px-16 py-5 border-white border-2 border-opacity-40 rounded-xl'
+            </div>
+            <div className='w-full h-screen overflow-scroll'
+                style={{
+                    scrollbarWidth: 'none'
+                }}
+            >
+                <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
+                <ZoomImage />
+
+                {/* <div className='flex justify-center flex-col bg-repeat'
                     style={{
-                        margin: '100px 20%',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        width: '100%',
+                        height: '645px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
                     }}
                 >
-                    <div className='font-extrabold text-3xl text-center underline mb-7'>About Us</div>
-                    <div>
-                        Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
+                    <div className='overflow-hidden'>
+                        <div className=' h-full absolute bg-repeat'
+                            style={{
+                                position: 'absolute',
+                                top: '0',
+                                left: '0',
+                                height: '100 %',
+                                width: '300%',
+                                background: `url(${aboutUSBg}) repeat-x`,
+                                animation: 'slide 300s linear infinite',
+                                zIndex: '-1',
+                            }}
+                        ></div>
                     </div>
-                    <ul className='px-5 m-5 grid grid-cols-2 list-disc '>
-                        <li style={{}}>    One-click report generation</li>
-                        <li style={{}}>    Intuitive dashboards with multi-analytics</li>
-                        <li style={{}}>    Automated processes</li>
-                        <li style={{}}>    Effortless management & much more</li>
-                        <li style={{}}>    Simplifying daily tasks</li>
 
-                    </ul>
-                    <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
+                    <span className='backdrop-blur-sm px-16 py-5 border-white border-2 border-opacity-40 rounded-xl'
+                        style={{
+                            margin: '100px 20%',
+                        }}
+                    >
+                        <div className='font-extrabold text-3xl text-center underline mb-7'>About Us</div>
+                        <div>
+                            Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
+                        </div>
+                        <ul className='px-5 m-5 grid grid-cols-2 list-disc '>
+                            <li style={{}}>    One-click report generation</li>
+                            <li style={{}}>    Intuitive dashboards with multi-analytics</li>
+                            <li style={{}}>    Automated processes</li>
+                            <li style={{}}>    Effortless management & much more</li>
+                            <li style={{}}>    Simplifying daily tasks</li>
 
-                </span>
-            </div > */}
+                        </ul>
+                        <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
+
+                    </span>
+                </div > */}
 
 
-            {/* //_                                   What Company Does */}
-            < div className='hidden bg-transparent overflow-scroll'
-                style={{
-                    width: '100vw',
-                    height: '100vh'
-                }}
-            >
+                {/* //_                                   What Company Does */}
+                {/* < div className=' bg-transparent w-screen h-screen overflow-scroll'
+                    style={{
+                        width: '100vw',
+                        height: '100vh'
+                    }}
+                > */}
                 {/* <div className='absolute w-full h-full bg-fixed border-black border-2'
-                    style={{
-                        backgroundImage: `url(${bg})`,
-                        // filter: 'blur(8px)'
-                    }}
-                >
+                        style={{
+                            backgroundImage: `url(${bg})`,
+                            // filter: 'blur(8px)'
+                        }}
+                    >
 
 
-                </div> */}
+                    </div> */}
                 <div
-                    className='backdrop-blur-xl'
+                    className='backdrop-blur-sm p-0 bg-transparent'
                     style={{
-                        backgroundImage: `url(${bg})`,
-                        // filter: 'blur(8px)'
+                        width: '100vw',
+                        height: '100vh',
+                        overflow: 'scroll',
+                        // msOverflowStyle: 'none',
+                        scrollbarWidth: 'none'
                     }}
                 >
 
-                    <div className='text-center text-white'
+                    <div className='text-center text-white bg-transparent'
                         style={{
                             fontSize: '80px',
                         }}
@@ -138,176 +155,124 @@ function LandingPage() {
                     </div>
                 </div>
                 {/* < div
-                    style={{
-                        fontSize: '60px',
-                        // margin: '100px 0px',
-                        marginBottom: '60px',
-                    }}
-                    className='text-white  navlim:text-xl text-center'
-                > Company Services</div > */}
-
-            </div >
-
-            <div
-                className="relative"
-                style={{
-                    position: "relative",
-                    overflow: "hidden", // Ensure the blur doesn't extend outside the container
-                }}
-            >
-                {/* Background Image with Blur */}
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        backgroundImage: `url(${bg})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        filter: "blur(8px)", // Apply the blur
-                        zIndex: 0,
-                    }}
-                ></div>
-
-                {/* Content Overlay */}
-                <div className="relative z-10 text-center text-white">
-                    <div
                         style={{
-                            fontSize: "80px",
-                            marginBottom: "30px",
+                            fontSize: '60px',
+                            // margin: '100px 0px',
+                            marginBottom: '60px',
                         }}
-                    >
-                        Company Services
-                    </div>
-                    <div
-                        className="bg-transparent"
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: "repeat(auto-fill, 350px)",
-                            justifyContent: "center",
-                            gap: "45px 45px",
-                        }}
-                    >
-                        {CompanyTileContent.map((tile, index) => (
-                            <CompanyTile
-                                text={tile.title}
-                                key={index}
-                                content={tile.content}
-                                img={tile.img}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
+                        className='text-white  navlim:text-xl text-center'
+                    > Company Services</div > */}
 
+                {/* </div > */}
 
-
-
-
-            {/* //_                                   Video */}
-            {/* < div className='flex justify-center items-center mx-auto'
-                style={{
-                    padding: '10% 0',
-                    width: '56.25%',
-                    height: '56.29%'
-                }}
-            >
-                <iframe width="1080" height="608"
-                    src="https://www.youtube.com/embed/QYFG0xP12yE?si=eUjMaIrk0-P0e-5R" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
-                    className='rounded-2xl'
+                {/* //_                                   Video */}
+                {/* < div className='flex justify-center items-center mx-auto'
+                    style={{
+                        padding: '10% 0',
+                        width: '56.25%',
+                        height: '56.29%'
+                    }}
                 >
-                </iframe>
-            </div > */}
-
-
-            {/* //  _                                   Count */}
-            {/* < div
-                className='rounded-3xl flex flex-wrap'
-                style={{
-                    backgroundImage: `url(${background})`,
-                    height: "auto",
-                    display: 'flex',
-                    justifyContent: 'space-around'
-                }}
-                ref={counterRef}
-            >
-                {
-                    countData.map((countData) => (
-                        <Count key={countData.id} count={countData.count} content={countData.content} />
-                    ))
-
-                }
-            </div > */}
-
-
-            {/* //_                                   Features */}
-            {/* < h1 style={{
-                padding: '3% 5%',
-            }}
-                className='text-4xl navlim:text-xl'
-            > Features</h1 >
-            <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, 350px)',
-                    justifyContent: 'center',
-                    gap: '45px 45px',
-                    // padding: '10% 0'
-                }}
-            >
-                {FeatureTileContent.map((tile, index) => (
-                    <FeatureTile text={tile.title} key={index} img={tile.img} />
-                ))}
-            </div> */}
-
-
-            {/* //_                                   FAQ */}
-            {/* <Faq /> */}
-
-
-            {/* //_                                   Request Demo */}
-            {/* <div className='flex flex-col justify-center items-center' style={{
-                width: '80%',
-                margin: '7% auto',
-                boxShadow: '5px 5px 20px 2px #AAAAAA',
-                padding: '5% 10%',
-            }} ref={reqDemoRef}>
-                <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
-                <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
-                <div className='m-10 w-full flex justify-center items-center gap-2'>
-                    <input
-                        type="email"
-                        placeholder='Email'
-                        value={email}
-                        className='p-5 border-slate-700 border-2'
-                        style={{ width: '80%' }}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <button
-                        className='p-5'
-                        type='submit'
-                        style={{
-                            background: '#053049',
-                            color: 'white',
-                            fontWeight: 'bolder',
-                            fontSize: 'large',
-                            width: '250px',
-                        }}
-                        onClick={async () => {
-                            fetch('http://localhost:1605/email', {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                },
-                                body: JSON.stringify({ email: email })
-                            })
-                        }}
+                    <iframe width="1080" height="608"
+                        src="https://www.youtube.com/embed/QYFG0xP12yE?si=eUjMaIrk0-P0e-5R" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+                        className='rounded-2xl'
                     >
-                        Request Demo
-                    </button>
-                </div>
-            </div> */}
+                    </iframe>
+                </div > */}
 
-            {/* //_                                   Footer */}
-            {/* <Footer ref1={aboutUsRef} /> */}
+
+                {/* //  _                                   Count */}
+                {/* < div
+                    className='rounded-3xl flex flex-wrap'
+                    style={{
+                        backgroundImage: `url(${background})`,
+                        height: "auto",
+                        display: 'flex',
+                        justifyContent: 'space-around'
+                    }}
+                    ref={counterRef}
+                >
+                    {
+                        countData.map((countData) => (
+                            <Count key={countData.id} count={countData.count} content={countData.content} />
+                        ))
+
+                    }
+                </div > */}
+
+
+                {/* //_                                   Features */}
+                {/* < h1 style={{
+                    padding: '3% 5%',
+                }}
+                    className='text-4xl navlim:text-xl'
+                > Features</h1 >
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, 350px)',
+                        justifyContent: 'center',
+                        gap: '45px 45px',
+                        // padding: '10% 0'
+                    }}
+                >
+                    {FeatureTileContent.map((tile, index) => (
+                        <FeatureTile text={tile.title} key={index} img={tile.img} />
+                    ))}
+                </div> */}
+
+
+                {/* //_                                   FAQ */}
+                {/* <Faq /> */}
+
+
+                {/* //_                                   Request Demo */}
+                {/* <div className='flex flex-col justify-center items-center' style={{
+                    width: '80%',
+                    margin: '7% auto',
+                    boxShadow: '5px 5px 20px 2px #AAAAAA',
+                    padding: '5% 10%',
+                }} ref={reqDemoRef}>
+                    <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
+                    <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
+                    <div className='m-10 w-full flex justify-center items-center gap-2'>
+                        <input
+                            type="email"
+                            placeholder='Email'
+                            value={email}
+                            className='p-5 border-slate-700 border-2'
+                            style={{ width: '80%' }}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <button
+                            className='p-5'
+                            type='submit'
+                            style={{
+                                background: '#053049',
+                                color: 'white',
+                                fontWeight: 'bolder',
+                                fontSize: 'large',
+                                width: '250px',
+                            }}
+                            onClick={async () => {
+                                fetch('http://localhost:1605/email', {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify({ email: email })
+                                })
+                            }}
+                        >
+                            Request Demo
+                        </button>
+                    </div>
+                </div> */}
+
+                {/* //_                                   Footer */}
+                {/* <Footer ref1={aboutUsRef} /> */}
+
+            </div>
         </>
     );
 }
