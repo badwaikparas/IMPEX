@@ -100,7 +100,7 @@ export const ZoomImage = () => {
         <div
             className='min-h-screen bg-fixed'
             style={{
-                backgroundImage: `url(${bg})`,
+                // backgroundImage: `url(${bg})`,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
