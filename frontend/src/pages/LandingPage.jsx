@@ -127,10 +127,6 @@ function LandingPage() {
                     className='backdrop-blur-sm p-0 bg-transparent'
                     style={{
                         width: '100vw',
-                        height: '100vh',
-                        overflow: 'scroll',
-                        // msOverflowStyle: 'none',
-                        scrollbarWidth: 'none'
                     }}
                 >
 
