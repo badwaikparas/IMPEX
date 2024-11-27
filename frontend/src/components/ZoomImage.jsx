@@ -114,7 +114,7 @@ export const ZoomImage = () => {
                 textShadow: '5px 5px 5px black'
             }}>
                 <div>Grow your Global Businesses with Shiply</div>
-                <div>Seamless Import - Export  trade software for  businesses of all sizes.</div>
+                {/* <div>Seamless Import - Export  trade software for  businesses of all sizes.</div> */}
 
             </div>
         </div>

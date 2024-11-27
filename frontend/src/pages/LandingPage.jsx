@@ -14,6 +14,12 @@ import CompanyTileContent from '../data/CompanyTile';
 import Navbar from '../components/Navbar';
 import countData from '../data/CountData';
 
+import aboutUSBg from '../assets/AboutUsbgs/1.avif'
+// import aboutUSBg from '../assets/AboutUsbgs/8.jpg'
+
+import bg from '../assets/Wall.jpg'
+
+
 function LandingPage() {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
@@ -26,113 +32,178 @@ function LandingPage() {
 
     const reqDemoRef = useRef(null);
     const aboutUsRef = useRef(null);
-    const counterRef = useRef();
-
-
+    const counterRef = useRef(null);
 
     const threshold1 = 50;
     const threshold2 = 1000;
     const threshold3 = 5;
     const threshold4 = 4;
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries, observer) => {
-            const entry = entries[0];
-            console.log('entry', entry);
-            console.log('entry.isIntersecting', entry.isIntersecting);
-            setCounterIsVisible(entry.isIntersecting)
-        });
-        observer.observe(counterRef.current)
-    }, [])
-
-    useEffect(() => {
-        let intervalId;
-        if (count1 < threshold1 && counterIsVisible) {
-            intervalId = setInterval(() => {
-                setCount1((c) => Math.min(c + 1, threshold1));
-            }, 1000 / threshold1);
-        }
-        return () => clearInterval(intervalId);
-    }, [count1, threshold1, counterIsVisible]);
-
-    useEffect(() => {
-        let intervalId;
-        if (count2 < threshold2 && counterIsVisible) {
-            intervalId = setInterval(() => {
-                setCount2((c) => Math.min(c + 1, threshold2));
-            }, 1000 / threshold2);
-        }
-        return () => clearInterval(intervalId);
-    }, [count2, threshold2, counterIsVisible]);
-
-    useEffect(() => {
-        let intervalId;
-        if (count3 < threshold3 && counterIsVisible) {
-            intervalId = setInterval(() => {
-                setCount3((c) => Math.min(c + 1, threshold3));
-            }, 1000 / threshold3);
-        }
-        return () => clearInterval(intervalId);
-    }, [count3, threshold3, counterIsVisible]);
-
-    useEffect(() => {
-        let intervalId;
-        if (count4 < threshold4 && counterIsVisible) {
-            intervalId = setInterval(() => {
-                setCount4((c) => Math.min(c + 1, threshold4));
-            }, 1000 / threshold4);
-        }
-        return () => clearInterval(intervalId);
-    }, [count4, threshold4, counterIsVisible]);
-
     return (
         <>
-            <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
-            <ZoomImage />
+            {/* <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
+            <ZoomImage /> */}
 
-            <div className='flex justify-center'
+            {/* <div className='flex justify-center flex-col bg-repeat'
                 style={{
-                    padding: '100px 20%'
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: '100%',
+                    height: '645px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
                 }}
             >
-                <div>
-                    Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
+                <div className='overflow-hidden'>
+                    <div className=' h-full absolute bg-repeat'
+                        style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            height: '100 %',
+                            width: '300%',
+                            background: `url(${aboutUSBg}) repeat-x`,
+                            animation: 'slide 300s linear infinite',
+                            zIndex: '-1',
+                        }}
+                    ></div>
                 </div>
-                <div>
-                    <p>One-click report generation</p>
-                    <p>Intuitive dashboards with multi-analytics</p>
-                    <p>Automated processes</p>
-                    <p>Effortless management</p>
-                    <p>& much more</p>
 
-                </div>
-                <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
-            </div>
+                <span className='backdrop-blur-sm px-16 py-5 border-white border-2 border-opacity-40 rounded-xl'
+                    style={{
+                        margin: '100px 20%',
+                    }}
+                >
+                    <div className='font-extrabold text-3xl text-center underline mb-7'>About Us</div>
+                    <div>
+                        Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
+                    </div>
+                    <ul className='px-5 m-5 grid grid-cols-2 list-disc '>
+                        <li style={{}}>    One-click report generation</li>
+                        <li style={{}}>    Intuitive dashboards with multi-analytics</li>
+                        <li style={{}}>    Automated processes</li>
+                        <li style={{}}>    Effortless management & much more</li>
+                        <li style={{}}>    Simplifying daily tasks</li>
+
+                    </ul>
+                    <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
+
+                </span>
+            </div > */}
 
 
             {/* //_                                   What Company Does */}
-            <h1 style={{
-                // fontSize: '80px',
-                padding: '3% 5%',
-            }}
-                className='text-4xl navlim:text-xl'
-            >Company services</h1>
-            <div
+            < div className='hidden bg-transparent overflow-scroll'
                 style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, 350px)',
-                    justifyContent: 'center',
-                    gap: '45px 45px'
+                    width: '100vw',
+                    height: '100vh'
                 }}
             >
-                {CompanyTileContent.map((tile, index) => (
-                    <CompanyTile text={tile.title} key={index} content={tile.content} img={tile.img} />
-                ))}
+                {/* <div className='absolute w-full h-full bg-fixed border-black border-2'
+                    style={{
+                        backgroundImage: `url(${bg})`,
+                        // filter: 'blur(8px)'
+                    }}
+                >
+
+
+                </div> */}
+                <div
+                    className='backdrop-blur-xl'
+                    style={{
+                        backgroundImage: `url(${bg})`,
+                        // filter: 'blur(8px)'
+                    }}
+                >
+
+                    <div className='text-center text-white'
+                        style={{
+                            fontSize: '80px',
+                        }}
+                    >
+                        Company Services
+                    </div>
+                    <div className='bg-transparent'
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, 350px)',
+                            justifyContent: 'center',
+                            gap: '45px 45px',
+                        }}
+                    >
+                        {CompanyTileContent.map((tile, index) => (
+                            <CompanyTile text={tile.title} key={index} content={tile.content} img={tile.img} />
+                        ))}
+                    </div>
+                </div>
+                {/* < div
+                    style={{
+                        fontSize: '60px',
+                        // margin: '100px 0px',
+                        marginBottom: '60px',
+                    }}
+                    className='text-white  navlim:text-xl text-center'
+                > Company Services</div > */}
+
+            </div >
+
+            <div
+                className="relative"
+                style={{
+                    position: "relative",
+                    overflow: "hidden", // Ensure the blur doesn't extend outside the container
+                }}
+            >
+                {/* Background Image with Blur */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: `url(${bg})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        filter: "blur(8px)", // Apply the blur
+                        zIndex: 0,
+                    }}
+                ></div>
+
+                {/* Content Overlay */}
+                <div className="relative z-10 text-center text-white">
+                    <div
+                        style={{
+                            fontSize: "80px",
+                            marginBottom: "30px",
+                        }}
+                    >
+                        Company Services
+                    </div>
+                    <div
+                        className="bg-transparent"
+                        style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fill, 350px)",
+                            justifyContent: "center",
+                            gap: "45px 45px",
+                        }}
+                    >
+                        {CompanyTileContent.map((tile, index) => (
+                            <CompanyTile
+                                text={tile.title}
+                                key={index}
+                                content={tile.content}
+                                img={tile.img}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
 
+
+
+
             {/* //_                                   Video */}
-            <div className='flex justify-center items-center mx-auto'
+            {/* < div className='flex justify-center items-center mx-auto'
                 style={{
                     padding: '10% 0',
                     width: '56.25%',
@@ -144,11 +215,11 @@ function LandingPage() {
                     className='rounded-2xl'
                 >
                 </iframe>
-            </div>
+            </div > */}
 
 
             {/* //  _                                   Count */}
-            <div
+            {/* < div
                 className='rounded-3xl flex flex-wrap'
                 style={{
                     backgroundImage: `url(${background})`,
@@ -160,20 +231,19 @@ function LandingPage() {
             >
                 {
                     countData.map((countData) => (
-                        // console.log(countData.count);
                         <Count key={countData.id} count={countData.count} content={countData.content} />
                     ))
 
                 }
-            </div>
+            </div > */}
 
 
             {/* //_                                   Features */}
-            <h1 style={{
+            {/* < h1 style={{
                 padding: '3% 5%',
             }}
                 className='text-4xl navlim:text-xl'
-            >Features</h1>
+            > Features</h1 >
             <div
                 style={{
                     display: 'grid',
@@ -186,15 +256,15 @@ function LandingPage() {
                 {FeatureTileContent.map((tile, index) => (
                     <FeatureTile text={tile.title} key={index} img={tile.img} />
                 ))}
-            </div>
+            </div> */}
 
 
             {/* //_                                   FAQ */}
-            <Faq />
+            {/* <Faq /> */}
 
 
             {/* //_                                   Request Demo */}
-            <div className='flex flex-col justify-center items-center' style={{
+            {/* <div className='flex flex-col justify-center items-center' style={{
                 width: '80%',
                 margin: '7% auto',
                 boxShadow: '5px 5px 20px 2px #AAAAAA',
@@ -234,10 +304,10 @@ function LandingPage() {
                         Request Demo
                     </button>
                 </div>
-            </div>
+            </div> */}
 
             {/* //_                                   Footer */}
-            <Footer ref1={aboutUsRef} />
+            {/* <Footer ref1={aboutUsRef} /> */}
         </>
     );
 }

@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export const Count = ({ count, content }) => {
+    const counterRef = useRef(null);
+    const [counter, setCounter] = useState(0);
+    const [isVisible, setIsVisible] = useState(0);
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            const entry = entries[0];
+            console.log('entry', entry);
+            console.log('entry.isIntersecting', entry.isIntersecting);
+            setIsVisible(entry.isIntersecting)
+        });
+        observer.observe(counterRef.current)
+    }, [])
+
+    useEffect(() => {
+        if (!isVisible) {
+            setCounter(0);
+        } else {
+            const val = setTimeout(() => {
+                if (counter < count) {
+                    setCounter(c => c + 1)
+                }
+                else {
+                    clearInterval(val)
+                }
+            }, [3000 / count])
+            return () => clearInterval(val)
+        }
+    }, [isVisible, count, counter])
     return (
-        <div
+        <div ref={counterRef}
             style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -18,7 +46,7 @@ export const Count = ({ count, content }) => {
                     // lineHeight: '7rem'
                 }}
             >
-                {count}+
+                {counter}+
             </h1>
             <p className='text-lg countlim:text-xl'
                 style={{

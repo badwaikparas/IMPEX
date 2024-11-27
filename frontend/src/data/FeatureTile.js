@@ -1,59 +1,67 @@
-import schedule from '../assets/FeaturesTile/8104941.jpg'
+import accounting from '../assets/FeaturesIcons/accounting.png'
+import logistics from '../assets/FeaturesIcons/logistics.png'
+import tracking from '../assets/FeaturesIcons/tracking.png'
+import work from '../assets/FeaturesIcons/work.png'
+import audience from '../assets/FeaturesIcons/audience.png'
+import contract from '../assets/FeaturesIcons/contract.png'
+import easy_access from '../assets/FeaturesIcons/easy-access.png'
+import efficacy from '../assets/FeaturesIcons/efficacy.png'
+import folder from '../assets/FeaturesIcons/folder (1).png'
 
 
 const FeatureTileContent = [
     {
         id: 1,
         title: "Accounting",
-        img: schedule,
+        img: accounting,
         content: "",
     },
     {
         id: 1,
         title: "Logistics",
-        img: schedule,
+        img: logistics,
         content: "",
 
     },
     {
         id: 1,
         title: "Organise ",
-        img: schedule,
+        img: work,
         content: "",
 
     },
     {
         id: 1,
         title: "Track",
-        img: schedule,
+        img: tracking,
         content: "",
 
     },
     {
         id: 1,
         title: "Documents",
-        img: schedule,
+        img: contract,
         content: "",
 
     },
     {
         id: 1,
         title: "Access",
-        img: schedule,
+        img: easy_access,
         content: "",
 
     },
     {
         id: 1,
         title: "Increase efficiency",
-        img: schedule,
+        img: efficacy,
         content: "",
 
     },
     {
         id: 1,
         title: "Insights",
-        img: schedule,
+        img: audience,
         content: "",
 
     },

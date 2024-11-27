@@ -1,0 +1,25 @@
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    /* scale: 1.1; */
+  }
+  100% {
+    opacity: 100%;
+    /* scale: 1; */
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1920px, 0, 0); /* The image width */
+  }
+}
+
+.card {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}

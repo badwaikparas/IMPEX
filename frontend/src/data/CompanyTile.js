@@ -15,25 +15,19 @@ const CompanyTileContent = [
         title: "Brokerage",
         img: telephone,
         // img: '../assets/CompanyTile/homepage-service-icon-1.svg',
-        content: "Our solutions for brokerage services are especially designed to facilitate smooth transactions between buyers and sellers in international markets. Acting as a trusted intermediary, we ensure that our platform provides you the most efficient and organised way.",
+        content: "Our solutions for brokers are especially designed to facilitate smooth transactions between buyers and sellers in international markets. Acting as a trusted intermediary, we ensure that our platform provides you the most efficient and organised way.",
     },
     {
         id: 2,
         title: "Recycling Plants",
         img: recyclingPlants,
-        content: "Recycling plants can use our solutions to help We provide end-to-end solutions for recyclers to manage their orders and clientele with specifics requirements..",
+        content: "Recycling Baling plants use our solutions to easily segregate orders and documents for plastic, metal, paper & other industry grade recycling materials. We provide end-to-end solutions for recyclers to manage their orders and clientele with specifics requirements",
     },
     {
         id: 3,
         title: "International Trading",
         img: ship,
         content: "Our international trading services provide businesses with the tools and expertise they need to navigate the complexities of global commerce. Whether importing raw materials or exporting finished goods, we ensure seamless transactions that comply with all necessary framework.",
-    },
-    {
-        id: 4,
-        title: "Paper Merchants",
-        img: paper,
-        content: "",
     },
     {
         id: 5,
@@ -45,12 +39,6 @@ const CompanyTileContent = [
         id: 6,
         title: "Plastics Recycling",
         img: machine,
-        content: "",
-    },
-    {
-        id: 7,
-        title: "Agriculture",
-        img: crop,
         content: "",
     },
     {

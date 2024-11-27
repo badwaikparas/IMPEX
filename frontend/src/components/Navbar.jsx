@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/Logo2.png';
 import hamburger from '../assets/Icons/bars-solid.svg'
 
 function Navbar({ ref1, ref2 }) {
@@ -17,13 +17,17 @@ function Navbar({ ref1, ref2 }) {
                 background: 'rgba(0, 0, 0, 0.15)'
             }}
         >
-            <div>
-                <img src={logo} alt="Company Logo" className='w-20 rounded-2xl' />
+            <div className='font-extrabold text-white text-3xl '>
+                <img className='h-20' src={logo} alt=""
+                    style={{
+                        filter: 'invert(1)'
+                    }}
+                />
             </div>
             <div className='text-black'>
                 <ul
-                    className='list-none text-2xl font-bold justify-evenly items-center hidden navlim:flex'
-                    style={{ width: "700px" }}
+                    className='text-lg text-white w-auto list-none text-1xl font-bold justify-evenly items-center hidden navlim:flex'
+                    style={{ gap: '45px' }}
                 >
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         Pricing
