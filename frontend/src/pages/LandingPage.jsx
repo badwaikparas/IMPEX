@@ -58,7 +58,7 @@ function LandingPage() {
                 <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
                 <ZoomImage />
 
-                {/* <div className='flex justify-center flex-col bg-repeat'
+                <div className='flex justify-center flex-col bg-repeat'
                     style={{
                         position: 'relative',
                         overflow: 'hidden',
@@ -75,7 +75,7 @@ function LandingPage() {
                                 position: 'absolute',
                                 top: '0',
                                 left: '0',
-                                height: '100 %',
+                                height: '100%',
                                 width: '300%',
                                 background: `url(${aboutUSBg}) repeat-x`,
                                 animation: 'slide 300s linear infinite',
@@ -93,7 +93,11 @@ function LandingPage() {
                         <div>
                             Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
                         </div>
-                        <ul className='px-5 m-5 grid grid-cols-2 list-disc '>
+                        <ul className='px-5 m-5 grid grid-cols-1  list-disc md:grid-cols-2'
+                            style={{
+                                gap: '0 54px'
+                            }}
+                        >
                             <li style={{}}>    One-click report generation</li>
                             <li style={{}}>    Intuitive dashboards with multi-analytics</li>
                             <li style={{}}>    Automated processes</li>
@@ -104,35 +108,22 @@ function LandingPage() {
                         <div>By minimizing unnecessary details and maximizing insights, Shiply frees up your time to focus on high-priority areas, optimizing your efforts and amplifying returns</div>
 
                     </span>
-                </div > */}
+                </div >
 
 
                 {/* //_                                   What Company Does */}
-                {/* < div className=' bg-transparent w-screen h-screen overflow-scroll'
-                    style={{
-                        width: '100vw',
-                        height: '100vh'
-                    }}
-                > */}
-                {/* <div className='absolute w-full h-full bg-fixed border-black border-2'
-                        style={{
-                            backgroundImage: `url(${bg})`,
-                            // filter: 'blur(8px)'
-                        }}
-                    >
-
-
-                    </div> */}
                 <div
                     className='backdrop-blur-sm p-0 bg-transparent'
                     style={{
-                        width: '100vw',
+                        width: '100%',
+                        padding: '100px 0',
+                        // margin: '0 0 -25px 0'
                     }}
                 >
 
-                    <div className='text-center text-white bg-transparent'
+                    <div className='text-center text-white bg-transparent mb-10'
                         style={{
-                            fontSize: '80px',
+                            fontSize: '60px',
                         }}
                     >
                         Company Services
@@ -150,14 +141,7 @@ function LandingPage() {
                         ))}
                     </div>
                 </div>
-                {/* < div
-                        style={{
-                            fontSize: '60px',
-                            // margin: '100px 0px',
-                            marginBottom: '60px',
-                        }}
-                        className='text-white  navlim:text-xl text-center'
-                    > Company Services</div > */}
+
 
                 {/* </div > */}
 
@@ -178,12 +162,13 @@ function LandingPage() {
 
 
                 {/* //  _                                   Count */}
-                {/* < div
-                    className='rounded-3xl flex flex-wrap'
+                < div
+                    className='rounded-3xl flex flex-wrap z-10'
                     style={{
                         backgroundImage: `url(${background})`,
                         height: "auto",
                         display: 'flex',
+                        padding: '50px',
                         justifyContent: 'space-around'
                     }}
                     ref={counterRef}
@@ -194,36 +179,50 @@ function LandingPage() {
                         ))
 
                     }
-                </div > */}
+                </div >
 
 
                 {/* //_                                   Features */}
-                {/* < h1 style={{
-                    padding: '3% 5%',
-                }}
-                    className='text-4xl navlim:text-xl'
-                > Features</h1 >
                 <div
+                    className='backdrop-blur-sm p-0 '
                     style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, 350px)',
-                        justifyContent: 'center',
-                        gap: '45px 45px',
-                        // padding: '10% 0'
+                        width: '100vw',
+                        padding: '100px 0',
+                        margin: '-20px 0 0 0'
                     }}
                 >
-                    {FeatureTileContent.map((tile, index) => (
-                        <FeatureTile text={tile.title} key={index} img={tile.img} />
-                    ))}
-                </div> */}
+
+                    <div className='text-white text-center bg-transparent mb-10'
+                        style={{
+                            fontSize: '60px',
+                        }}
+                    >
+                        Features
+                    </div>
+                    <div className='bg-transparent'
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, 350px)',
+                            justifyContent: 'center',
+                            gap: '45px 45px',
+                        }}
+                    >
+
+                        {FeatureTileContent.map((tile, index) => (
+                            <FeatureTile text={tile.title} key={index} img={tile.img} />
+                        ))}
+                    </div>
+                </div>
 
 
                 {/* //_                                   FAQ */}
-                {/* <Faq /> */}
+                <Faq />
 
 
                 {/* //_                                   Request Demo */}
-                {/* <div className='flex flex-col justify-center items-center' style={{
+
+
+                <div className='flex flex-col justify-center items-center bg-white' style={{
                     width: '80%',
                     margin: '7% auto',
                     boxShadow: '5px 5px 20px 2px #AAAAAA',
@@ -263,12 +262,13 @@ function LandingPage() {
                             Request Demo
                         </button>
                     </div>
-                </div> */}
-
+                </div>
                 {/* //_                                   Footer */}
-                {/* <Footer ref1={aboutUsRef} /> */}
-
+                <Footer ref1={aboutUsRef} />
             </div>
+
+
+
         </>
     );
 }

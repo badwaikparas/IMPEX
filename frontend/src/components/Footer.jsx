@@ -3,12 +3,15 @@ import facebook from '../assets/square-facebook-brands-solid.svg'
 import instagram from '../assets/square-instagram-brands-solid.svg'
 import Xcom from '../assets/square-x-twitter-brands-solid (1).svg'
 import youtube from '../assets/square-youtube-brands-solid (1).svg'
+import linkedin from '../assets/linkedin-brands-solid.svg'
 import logo from '../assets/LOGO2.png'
+import phone from '../assets/phone-solid.svg'
+import email from '../assets/envelope-solid.svg'
 
 function Footer({ ref1 }) {
     return (
         <>
-            <div className='bg-slate-800 p-10 text-white rounded-lg flex flex-wrap ' style={{
+            <div className='bg-slate-800 p-10 text-white rounded-lg flex justify-start flex-wrap items-start' style={{
                 gap: '25px 100px'
             }} ref={ref1}>
                 {/* <div> */}
@@ -26,23 +29,6 @@ function Footer({ ref1 }) {
                     <h1 className='font-semibold'>Our Vision</h1>
                     <p className=' text-3xl'>At Company our passion is growing creative buisness through Creativity, Investment and Enterprise to accelerate yourbusiness and go global</p>
                 </div> */}
-                <div className=''>
-                    <h1>Social</h1>
-                    <div className='flex justify-start items-center gap-6 my-5'>
-                        <a href="" className=''>
-                            <img src={facebook} alt="facebook" className='w-8' />
-                        </a>
-                        <a href="">
-                            <img src={instagram} alt="instagram" className='w-8' />
-                        </a>
-                        <a href="">
-                            <img src={Xcom} alt="X.com" className='w-8' />
-                        </a>
-                        <a href="">
-                            <img src={youtube} alt="youtube" className='w-8' />
-                        </a>
-                    </div>
-                </div>
                 {/* </div> */}
                 {/* <div className='flex gap-2 justify-between'> */}
                 {/* <div className='hidden footerlim:block'>
@@ -55,8 +41,8 @@ function Footer({ ref1 }) {
                         <p>MUSIC</p>
                     </div>
                 </div> */}
-                <div>
-                    <h1>Services</h1>
+                {/* <div> */}
+                {/* <h1>Services</h1>
                     <div className='grid-cols-2'>
                         <ul>
                             <li><a href="">Buisness Development</a></li>
@@ -65,9 +51,9 @@ function Footer({ ref1 }) {
                             <li><a href="">Investing</a></li>
                             <li><a href="">Hi1</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div>
+                    </div> */}
+                {/* </div> */}
+                {/* <div>
                     <h1>ABOUT US</h1>
                     <div>
                         <ul>
@@ -76,24 +62,51 @@ function Footer({ ref1 }) {
                             <li><a href="">hi3</a></li>
                         </ul>
                     </div>
-                </div>
-                <div className='flex flex-col gap-4'>
-                    <div>
-                        <h1>CONTACT US</h1>
-                        <p className='text-2xl footerlim2:text-4xl'> +91 9890596000</p>
-                        <p className='italic footerlim2:text-4xl'>info@starorigin.in</p>
+                </div> */}
+                {/* <div className='flex flex-col gap-4'> */}
+                <div className='w-fit'>
+                    <h1 className='text-2xl'>Contact Us</h1>
+                    <div className='flex justify-between my-4 gap-9 flex-wrap'>
+                        <div className='font-thin'>
+                            <p>104, Shree Ambey Complex,</p>
+                            <p>Floor 2 Rajma  Building,</p>
+                            <p>Wardhaman Nagar,</p>
+                            <p>Maharashtra, India</p>
+                        </div>
+                        <div>
+                            {/* <p className='text-2xl footerlim2:text-4xl'> */}
+                            <div className='flex gap-3'>
+                                <img className='w-5' src={phone} alt="" />
+                                <p> +91 9890596000</p></div>
+                            <div className='flex gap-3'>
+                                <img className='w-5' src={email} alt="" />
+                                <p>info@starorigin.in</p>
+                            </div>
+
+                            {/* <p className='italic footerlim2:text-4xl'> */}
+
+                        </div>
                     </div>
 
-                    <div className='font-thin'>
-                        <p>104, Shree Ambey Complex,</p>
-                        <p>Floor 2 Rajma  Building,</p>
-                        <p>Wardhaman Nagar,</p>
-                        <p>Maharashtra, India</p>
+                </div>
+                <div className=''>
+                    <h1 className='text-2xl'>Social</h1>
+                    <div className='flex justify-start items-center gap-6 my-5'>
+                        <a href="https://www.facebook.com/starorigin.in" className=''>
+                            <img src={facebook} alt="facebook" className='w-8' />
+                        </a>
+                        <a href="https://www.instagram.com/staroriginbs.in/">
+                            <img src={instagram} alt="instagram" className='w-8' />
+                        </a>
+                        <a href="https://www.linkedin.com/company/starorigin-business-solutions/">
+                            <img src={linkedin} alt="linkedin" className='w-8' />
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                {/* </div> */}
-            </div >
+            {/* </div> */}
+            {/* </div > */}
         </>
     )
 }

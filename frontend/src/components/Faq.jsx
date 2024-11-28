@@ -9,7 +9,7 @@ function Faq() {
     });
 
     return (
-        <section className="py-24">
+        <section className="py-24 bg-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
                     {/* Image Section */}
@@ -25,10 +25,10 @@ function Faq() {
                     <div className="w-full lg:w-1/2">
                         <div className="lg:max-w-xl">
                             <div className="mb-6 lg:mb-16 text-center lg:text-left">
-                                <h6 className="text-lg font-medium text-indigo-600 mb-2">FAQs</h6>
-                                <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">
-                                    Looking for answers?
+                                <h2 className="text-4xl font-bold text-indigo-600 leading-[3.25rem]">
+                                    FAQs
                                 </h2>
+                                <h6 className="text-lg font-medium  mb-5">Looking for answers?</h6>
                             </div>
 
                             {/* FAQ Accordion Group */}

@@ -25,7 +25,7 @@ export const Count = ({ count, content }) => {
                 else {
                     clearInterval(val)
                 }
-            }, [3000 / count])
+            }, [Math.floor(3000 / count)])
             return () => clearInterval(val)
         }
     }, [isVisible, count, counter])
