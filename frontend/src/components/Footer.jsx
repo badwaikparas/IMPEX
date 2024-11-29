@@ -4,16 +4,16 @@ import instagram from '../assets/square-instagram-brands-solid.svg'
 import Xcom from '../assets/square-x-twitter-brands-solid (1).svg'
 import youtube from '../assets/square-youtube-brands-solid (1).svg'
 import linkedin from '../assets/linkedin-brands-solid.svg'
-import logo from '../assets/LOGO2.png'
+import logo from '../assets/Logo2.png'
 import phone from '../assets/phone-solid.svg'
 import email from '../assets/envelope-solid.svg'
 
-function Footer({ ref1 }) {
+function Footer() {
     return (
         <>
             <div className='bg-slate-800 p-10 text-white rounded-lg flex justify-start flex-wrap items-start' style={{
                 gap: '25px 100px'
-            }} ref={ref1}>
+            }}>
                 {/* <div> */}
                 <div className=''>
                     <img src={logo} alt="Company logo" className='h-28 rounded-lg'

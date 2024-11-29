@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/Logo2.png';
 import hamburger from '../assets/Icons/bars-solid.svg'
 
-function Navbar({ ref1, ref2 }) {
+function Navbar({ ref1, ref2, ref3 }) {
     const [drop, setDrop] = useState(true);
 
     return (
@@ -57,9 +57,27 @@ function Navbar({ ref1, ref2 }) {
                             height: 'auto'
                         }}>
                         <ul className='list-none'>
-                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><a href="">Pricing</a></li>
-                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><a href="">About Us</a></li>
-                            <li className='p-2 cursor-pointer'><a href="">Request Demo</a></li>
+                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><span onClick={() => {
+                                ref2.current.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                    inline: "start"
+                                })
+                            }}>About Us</span></li>
+                            <li className='p-2 cursor-pointer border-b-2 border-slate-300'><span href="" onClick={() => {
+                                ref1.current.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                    inline: "start"
+                                })
+                            }}>Request Demo</span></li>
+                            <li className='p-2 cursor-pointer'><span href="" onClick={() => {
+                                ref3.current.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center",
+                                    inline: "start"
+                                })
+                            }}>Contact Us</span></li>
                         </ul>
                     </div>}
                 </div>

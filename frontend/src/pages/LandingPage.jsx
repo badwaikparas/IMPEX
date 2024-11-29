@@ -58,12 +58,11 @@ function LandingPage() {
                 <Navbar ref1={reqDemoRef} ref2={aboutUsRef} />
                 <ZoomImage />
 
-                <div className='flex justify-center flex-col bg-repeat'
+                <div ref={aboutUsRef} className='flex justify-center flex-col bg-repeat'
                     style={{
                         position: 'relative',
                         overflow: 'hidden',
                         width: '100%',
-                        height: '645px',
                         display: 'flex',
                         justifyContent: 'center',
                         flexDirection: 'column',
@@ -78,22 +77,18 @@ function LandingPage() {
                                 height: '100%',
                                 width: '300%',
                                 background: `url(${aboutUSBg}) repeat-x`,
-                                animation: 'slide 300s linear infinite',
+                                animation: 'slide 100s linear infinite',
                                 zIndex: '-1',
                             }}
                         ></div>
                     </div>
 
-                    <span className='backdrop-blur-sm px-16 py-5 border-white border-2 border-opacity-40 rounded-xl'
-                        style={{
-                            margin: '100px 20%',
-                        }}
-                    >
-                        <div className='font-extrabold text-3xl text-center underline mb-7'>About Us</div>
+                    <span className="m-[10%] backdrop-blur-sm p-5 border border-white border-opacity-40 rounded-xl md:px-16 md:py-5 md:m-[0%]">
+                        <div className='font-extrabold text-3xl text-center underline mt-4 mb-7'>About Us</div>
                         <div>
                             Shiply empowers your business growth through streamlined and efficient management of daily operations. Our comprehensive import-export software simplifies tasks with:
                         </div>
-                        <ul className='px-5 m-5 grid grid-cols-1  list-disc md:grid-cols-2'
+                        <ul className=' m-5 grid grid-cols-1  list-disc md:grid-cols-2 md:px-5'
                             style={{
                                 gap: '0 54px'
                             }}
@@ -222,15 +217,15 @@ function LandingPage() {
                 {/* //_                                   Request Demo */}
 
 
-                <div className='flex flex-col justify-center items-center bg-white' style={{
-                    width: '80%',
-                    margin: '7% auto',
+                <div className='flex flex-col justify-center items-center bg-white mx-auto my-10 md:my-20 w-10/12' style={{
+                    // width: '80%',
+                    // margin: '7% auto',
                     boxShadow: '5px 5px 20px 2px #AAAAAA',
                     padding: '5% 10%',
                 }} ref={reqDemoRef}>
                     <h1 className='text-3xl font-extrabold'>Interested in Learning More?</h1>
                     <p className='text-sm'>Learn how we can meet the unique needs of your trading or recycling business with an online demonstration tailored to your specific areas of interest.</p>
-                    <div className='m-10 w-full flex justify-center items-center gap-2'>
+                    <div className='m-10 w-full flex flex-wrap justify-center items-center gap-2'>
                         <input
                             type="email"
                             placeholder='Email'
@@ -247,7 +242,7 @@ function LandingPage() {
                                 color: 'white',
                                 fontWeight: 'bolder',
                                 fontSize: 'large',
-                                width: '250px',
+                                width: 'auto',
                             }}
                             onClick={async () => {
                                 fetch('http://localhost:1605/email', {
@@ -264,7 +259,7 @@ function LandingPage() {
                     </div>
                 </div>
                 {/* //_                                   Footer */}
-                <Footer ref1={aboutUsRef} />
+                <Footer />
             </div>
 
 
