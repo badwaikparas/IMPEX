@@ -8,12 +8,12 @@ import logo from '../assets/LOGO2.png'
 import phone from '../assets/phone-solid.svg'
 import email from '../assets/envelope-solid.svg'
 
-function Footer({ ref1 }) {
+function Footer() {
     return (
         <>
             <div className='bg-slate-800 p-10 text-white rounded-lg flex justify-start flex-wrap items-start' style={{
                 gap: '25px 100px'
-            }} ref={ref1}>
+            }}>
                 {/* <div> */}
                 <div className=''>
                     <img src={logo} alt="Company logo" className='h-28 rounded-lg'

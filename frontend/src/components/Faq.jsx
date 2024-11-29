@@ -45,7 +45,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5> What is the typical onboarding time ?</h5>
+                                        <h5 className='text-left'> What is the typical onboarding time ?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq1 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -82,7 +82,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5> What documents are required for importing/exporting goods?</h5>
+                                        <h5 className='text-left'> What documents are required for importing / exporting goods?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq2 ? 'rotate-180' : ''}`}
                                             width="22"
@@ -120,7 +120,7 @@ function Faq() {
                                             faq4: false
                                         }))}
                                     >
-                                        <h5> Do you offer customised solutions ?</h5>
+                                        <h5 className='text-left'> Do you offer customised solutions ?</h5>
                                         <svg
                                             className={`text-gray-900 transition transform group-hover:text-indigo-600 ${display.faq3 ? 'rotate-180' : ''}`}
                                             width="22"
