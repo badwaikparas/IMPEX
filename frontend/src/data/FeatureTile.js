@@ -1,7 +1,7 @@
 import accounting from '../assets/FeaturesIcons/accounting.png'
 import logistics from '../assets/FeaturesIcons/logistics.png'
-import tracking from '../assets/FeaturesIcons/tracking.png'
-import work from '../assets/FeaturesIcons/work.png'
+import tracking from '../assets/FeaturesIcons/tracking-app.png'
+import organize from '../assets/FeaturesIcons/organize.png'
 import audience from '../assets/FeaturesIcons/audience.png'
 import contract from '../assets/FeaturesIcons/contract.png'
 import easy_access from '../assets/FeaturesIcons/easy-access.png'
@@ -26,7 +26,7 @@ const FeatureTileContent = [
     {
         id: 1,
         title: "Organise ",
-        img: work,
+        img: organize,
         content: "",
 
     },

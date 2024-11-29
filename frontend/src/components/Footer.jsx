@@ -11,7 +11,7 @@ import email from '../assets/envelope-solid.svg'
 function Footer() {
     return (
         <>
-            <div className='bg-slate-800 p-10 text-white rounded-lg flex justify-start flex-wrap items-start' style={{
+            <div className='bg-slate-800 p-10 text-white rounded-lg flex flex-grow justify-start flex-wrap items-start' style={{
                 gap: '25px 100px'
             }}>
                 {/* <div> */}
