@@ -1,6 +1,6 @@
 import accounting from '../assets/FeaturesIcons/accounting.png'
 import logistics from '../assets/FeaturesIcons/logistics.png'
-import tracking from '../assets/FeaturesIcons/tracking-app.png'
+import tracking from '../assets/FeaturesIcons/tracking.png'
 import organize from '../assets/FeaturesIcons/organize.png'
 import audience from '../assets/FeaturesIcons/audience.png'
 import contract from '../assets/FeaturesIcons/contract.png'
