@@ -11,7 +11,8 @@ function FeatureTile({ text, img }) {
         >
             <img src={img} alt="loading image" style={{
                 height: '200px',
-                width: '200px'
+                width: '200px',
+                filter: 'grayscale(100%)'
             }} />
             <p className='font-bold  text-2xl p-3'>{text}</p>
         </div>
