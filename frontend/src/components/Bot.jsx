@@ -225,14 +225,14 @@ function BotMessage({ msg }) {
 
 function UserMessage({ msg }) {
     return (
-        <div className="flex justify-end items-end my-4">
+        <div className="flex justify-end items-end my-4 px-2">
             <div
                 className="w-9/12 overflow-auto rounded-lg rounded-br-none py-1 px-2 bg-gray-300 text-black"
                 style={{ wordWrap: 'break-word' }}
             >
                 {msg}
             </div>
-            <img className="w-8 h-8" src={user} alt="user icon" />
+            {/* <img className="w-8 h-8" src={user} alt="user icon" /> */}
         </div>
     );
 }
