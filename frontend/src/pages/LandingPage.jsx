@@ -5,6 +5,7 @@ import TileContent from '../data/FeatureTile';
 import background from '../assets/CompanyCount.jpeg';
 import Faq from '../components/Faq';
 import Footer from '../components/Footer';
+import Bot from '../components/Bot';
 import ZoomImage from '../components/ZoomImage';
 import { Count } from '../components/Count';
 import FeatureTile from '../components/FeatureTile';
@@ -41,6 +42,8 @@ function LandingPage() {
 
     return (
         <>
+            <Bot />
+
             <div className='absolute w-full h-full -z-10'
                 style={{
                     background: `url(${bg})`,
@@ -50,7 +53,7 @@ function LandingPage() {
             >
 
             </div>
-            <div className='w-full h-screen overflow-scroll'
+            <div className=' w-full h-screen overflow-scroll'
                 style={{
                     scrollbarWidth: 'none'
                 }}
