@@ -134,14 +134,25 @@ function Bot() {
 
     return (
         <div className="absolute bottom-2 right-2 z-30">
-            {toggle ? (
-                <div
-                    className="bg-white p-1 rounded-full shadow-lg cursor-pointer"
-                    onClick={() => setToggle((c) => !c)}
-                >
-                    <img className="w-12" src={botImage} alt="bot image" />
-                </div>
-            ) : (
+            <div
+                className="bg-white p-1 rounded-full shadow-lg cursor-pointer"
+                onClick={() => {
+                    const phone_no = "917506434482"
+                    const url = `https://web.whatsapp.com/send/?phone=${phone_no}&text=%2Fstart&type=phone_number&app_absent=0`
+                    window.open(url, "_blank")
+                }}
+            >
+                <img className="w-12" src={botImage} alt="bot image" />
+            </div>
+
+            {/* {toggle ? ( */}
+            {/* <div
+                className="bg-white p-1 rounded-full shadow-lg cursor-pointer"
+                onClick={() => setToggle((c) => !c)}
+            >
+                <img className="w-12" src={botImage} alt="bot image" />
+            </div> */}
+            {/* ) : (
                 <div
                     className="flex flex-col bg-white rounded-lg shadow-lg"
                     style={{
@@ -204,7 +215,7 @@ function Bot() {
                         </div>
                     </div>
                 </div>
-            )}
+            )} */}
         </div>
     );
 }
