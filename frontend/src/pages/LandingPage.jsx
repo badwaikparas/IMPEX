@@ -248,7 +248,7 @@ function LandingPage() {
                                 width: 'auto',
                             }}
                             onClick={async () => {
-                                fetch('http://localhost:1605/email', {
+                                fetch(`${import.meta.env.VITE_BACKEND_URL}email`, {
                                     method: "POST",
                                     headers: {
                                         "Content-Type": "application/json",
