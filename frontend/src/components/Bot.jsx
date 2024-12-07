@@ -98,47 +98,46 @@ import send from '../assets/send.png';
 import user from '../assets/Bot.png';
 
 function Bot() {
-    const [toggle, setToggle] = useState(true);
-    const [messages, setMessages] = useState([
-        { type: 'bot', text: 'Welcome! How can I assist you today?' },
-    ]);
-    const [userMessage, setUserMessages] = useState('');
-    const refMessagebox = useRef(null);
+    // const [toggle, setToggle] = useState(true);
+    // const [messages, setMessages] = useState([
+    //     { type: 'bot', text: 'Welcome! How can I assist you today?' },
+    // ]);
+    // const [userMessage, setUserMessages] = useState('');
+    // const refMessagebox = useRef(null);
 
-    const handleSendMessage = () => {
-        if (!userMessage.trim()) return;
+    // const handleSendMessage = () => {
+    //     if (!userMessage.trim()) return;
 
-        setMessages((prevMessages) => [
-            ...prevMessages,
-            { type: 'user', text: userMessage },
-        ]);
+    //     setMessages((prevMessages) => [
+    //         ...prevMessages,
+    //         { type: 'user', text: userMessage },
+    //     ]);
 
-        setUserMessages('');
+    //     setUserMessages('');
 
-        // setTimeout(() => {
-        setMessages((prevMessages) => [
-            ...prevMessages,
-            { type: 'bot', text: 'This is a bot response.' },
-        ]);
+    //     // setTimeout(() => {
+    //     setMessages((prevMessages) => [
+    //         ...prevMessages,
+    //         { type: 'bot', text: 'This is a bot response.' },
+    //     ]);
 
-        // Scroll to bottom after bot's response
-        refMessagebox.current.scrollTop = refMessagebox.current.scrollHeight;
-        // }, 1000);
+    //     // Scroll to bottom after bot's response
+    //     refMessagebox.current.scrollTop = refMessagebox.current.scrollHeight;
+    //     // }, 1000);
 
 
-        // Scroll to bottom immediately after sending message
-        setTimeout(() => {
-            refMessagebox.current.scrollTop = refMessagebox.current.scrollHeight;
-        }, 0);
-    };
+    //     // Scroll to bottom immediately after sending message
+    //     setTimeout(() => {
+    //         refMessagebox.current.scrollTop = refMessagebox.current.scrollHeight;
+    //     }, 0);
+    // };
 
     return (
         <div className="absolute bottom-2 right-2 z-30">
             <div
                 className="bg-white p-1 rounded-full shadow-lg cursor-pointer"
                 onClick={() => {
-                    const phone_no = "917506434482"
-                    const url = `https://web.whatsapp.com/send/?phone=${phone_no}&text=%2Fstart&type=phone_number&app_absent=0`
+                    const url = `https://web.whatsapp.com/send/?phone=${import.meta.env.VITE_PHONE_NO}&text=%2Fstart&type=phone_number&app_absent=0`
                     window.open(url, "_blank")
                 }}
             >
