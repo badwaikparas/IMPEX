@@ -30,9 +30,9 @@ function Navbar({ ref1, ref2, ref3 }) {
                     className='text-lg text-white w-auto list-none text-1xl font-bold justify-evenly items-center hidden navlim:flex'
                     style={{ gap: '45px' }}
                 >
-                    <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
+                    {/* <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer'>
                         Pricing
-                    </li>
+                    </li> */}
                     <li className='p-2 rounded-lg hover:bg-black hover:bg-opacity-30 cursor-pointer' onClick={() => ref2.current ? ref2.current.scrollIntoView({ behavior: 'smooth' }) : null}>
                         About Us
                     </li>

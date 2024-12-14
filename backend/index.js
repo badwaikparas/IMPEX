@@ -58,6 +58,7 @@ app.post("/email", async (req, res) => {
 
 // QR code endpoint
 app.get("/qr", (req, res) => {
+    qrcode.generate(qr, { small: true });
     if (qrCodeData) {
         res.json({ qrCode: qrCodeData });
     } else {
@@ -100,21 +101,32 @@ client.on("qr", (qr) => {
 });
 
 client.on("message_create", async (message) => {
-    if (message.body.startsWith("!")) {
-        const command = message.body.slice(1).split(" ")[0];
-        const args = message.body.slice(1).split(" ").slice(1);
-
-        switch (command) {
-            case "start":
-                await message.reply("Hello! How can I assist you today?");
-                break;
-            case "info":
-                await message.reply("This is a bot made by Paras Badwaik.");
-                break;
-            default:
-                await message.reply("Unrecognized command. Try !start or !info.");
-        }
+    if (message === "What are my shipment details?") {
+        await message.reply(`
+            Hello! 👋 Here's an update on your shipment details:
+            
+            Order Number: #123456789
+            Shipping Address: 123 Maple Street, Springfield, IL, 62701
+            Current Status: In Transit 🚚
+            Estimated Delivery Date: December 16, 2024`
+        );
     }
+
+    // if (message.body.startsWith("!")) {
+    //     const command = message.body.slice(1).split(" ")[0];
+    //     const args = message.body.slice(1).split(" ").slice(1);
+
+    //     switch (command) {
+    //         case "start":
+    //             await message.reply("Hello! How can I assist you today?");
+    //             break;
+    //         case "info":
+    //             await message.reply("This is a bot made by Paras Badwaik.");
+    //             break;
+    //         default:
+    //             await message.reply("Unrecognized command. Try !start or !info.");
+    //     }
+    // }
 });
 
 // Initialize WhatsApp client

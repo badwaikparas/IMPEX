@@ -137,7 +137,8 @@ function Bot() {
             <div
                 className="bg-white p-1 rounded-full shadow-lg cursor-pointer"
                 onClick={() => {
-                    const url = `https://web.whatsapp.com/send/?phone=${import.meta.env.VITE_PHONE_NO}&text=%2Fstart&type=phone_number&app_absent=0`
+                    const url = `https://web.whatsapp.com/send/?phone=${import.meta.env.VITE_PHONE_NO}&text=What%20are%20my%20shipment%20details%3F
+&type=phone_number&app_absent=0`
                     window.open(url, "_blank")
                 }}
             >
