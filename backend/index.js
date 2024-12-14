@@ -101,14 +101,14 @@ client.on("qr", (qr) => {
 });
 
 client.on("message_create", async (message) => {
-    if (message === "What are my shipment details?") {
+    if (message.body === "What are my shipment details?") {
         await message.reply(`
-            Hello! 👋 Here's an update on your shipment details:
+Hello! 👋 Here's an update on your shipment details:
             
-            Order Number: #123456789
-            Shipping Address: 123 Maple Street, Springfield, IL, 62701
-            Current Status: In Transit 🚚
-            Estimated Delivery Date: December 16, 2024`
+Order Number: #123456789
+Shipping Address: 123 Maple Street, Springfield, IL, 62701
+Current Status: In Transit 🚚
+Estimated Delivery Date: December 16, 2024`
         );
     }
 
