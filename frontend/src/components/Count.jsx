@@ -7,8 +7,8 @@ export const Count = ({ count, content }) => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries, observer) => {
             const entry = entries[0];
-            console.log('entry', entry);
-            console.log('entry.isIntersecting', entry.isIntersecting);
+            // console.log('entry', entry);
+            // console.log('entry.isIntersecting', entry.isIntersecting);
             setIsVisible(entry.isIntersecting)
         });
         observer.observe(counterRef.current)

@@ -18,10 +18,13 @@ export default {
             'phobes': ['Phobes', 'sans-serif'],
         },
         screens: {
-            'navlim': '790px',
+            'navlim': '906px',
+            'aboutUs': '980px',
             'footerlim': '1080px',
-            'footerlim2': '505px',
-            'countlim': '1300px'
+            'countlim': '1300px',
+            'heading': '390px',
+            'aboutUs2': '440px',
+            'aboutUs3': '620px',
         },
     },
     plugins: [],

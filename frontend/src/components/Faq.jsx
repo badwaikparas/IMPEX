@@ -24,8 +24,8 @@ function Faq() {
                     {/* FAQ Content Section */}
                     <div className="w-full lg:w-1/2">
                         <div className="lg:max-w-xl">
-                            <div className="mb-6 lg:mb-16 text-center lg:text-left">
-                                <h2 className="text-4xl font-bold text-indigo-600 leading-[3.25rem]">
+                            <div className="mb-12 lg:mb-16 text-center lg:text-left">
+                                <h2 className="text-4xl font-bold leading-[3.25rem]">
                                     FAQs
                                 </h2>
                                 <h6 className="text-lg font-medium  mb-5">Looking for answers?</h6>

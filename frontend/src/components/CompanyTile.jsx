@@ -5,8 +5,8 @@ function CompanyTile({ content, text, img }) {
         <div className='card relative bg-transparent'>
             <div className='flex justify-center items-center rounded-xl bg-blue-950  flex-column border-black border-2'
                 style={{
-                    width: '350px',
-                    height: '350px'
+                    width: '300px',
+                    height: '300px'
                 }}
             >
                 <p className='p-3 font-roboto text-white'>{content}</p>
@@ -16,14 +16,16 @@ function CompanyTile({ content, text, img }) {
                     background: 'white',
                     zIndex: 2,
                     translate: '0% -100%',
-                    width: '350px',
-                    height: '350px'
+                    width: '300px',
+                    height: '300px'
                 }}
             >
                 <div>
-                    <img src={img} alt="loading image..." />
+                    <img width={'250px'} src={img} alt="loading image..." style={{
+                        filter: 'grayscale(100%)'
+                    }} />
                 </div>
-                <p className=''>
+                <p className='font-bold '>
                     {text}
                 </p>
             </div >
