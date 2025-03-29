@@ -21,11 +21,13 @@ function CompanyTile({ content, text, img }) {
                 }}
             >
                 <div>
-                    <img width={'250px'} src={img} alt="loading image..." style={{
-                        filter: 'grayscale(100%)'
+                    <img src={img} alt="loading image..." style={{
+                        filter: 'grayscale(100%)',
+                        height: '168px',
+                        // width: '165px'
                     }} />
                 </div>
-                <p className='font-bold '>
+                <p className='font-bold text-wrap px-5 text-center'>
                     {text}
                 </p>
             </div >

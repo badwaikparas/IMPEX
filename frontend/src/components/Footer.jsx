@@ -35,7 +35,8 @@ function Footer({ ref1 }) {
                             {/* <p className='text-2xl footerlim2:text-4xl'> */}
                             <div className='flex gap-3'>
                                 <img className='w-5' src={phone} alt="" />
-                                <p>  +91 9923468000</p></div>
+                                <p>+91 9923468000</p>
+                            </div>
                             <div className='flex gap-3'>
                                 <img className='w-5' src={email} alt="" />
                                 <p>sales@starorigin.in</p>
